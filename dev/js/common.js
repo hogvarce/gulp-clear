@@ -3,7 +3,6 @@ requirejs.config({
     paths: {
         helperPage : 'helper-page'
     }
-    }
 });
 
 require(['helperPage'], function(helperPage){});
