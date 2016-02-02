@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // минификатор
 	csso = require('gulp-csso'),
 	concat = require('gulp-concat'); // Склейка файлов
+	ts = require('gulp-typescript');
 
 // Локальный сервер
 gulp.task('webserver', function() {
@@ -45,7 +46,7 @@ path = {
 		destination: './public/assets/img'
 	},
 	js: {
-		source: './dev/js/**/*',
+		source: ['./dev/js/**/*', './dev/js/*'],
 		watch: './dev/js/**/*',
 		destination: './public/assets/js'
 	},
@@ -60,12 +61,14 @@ path = {
 
 // Собираем JS
 gulp.task('js', function() {
-	gulp.src(['./dev/js/**/*', './dev/js/*'])
-		.pipe(gulp.dest('./public/assets/js'));
-	gulp.src(['./dev/js/*'])
+	gulp.src(path.js.source)
+		.pipe(ts({
+			declaration: true,
+			noExternalResolve: true
+		}))
  		.pipe(concat('init.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./public/assets/js'));
+		.pipe(gulp.dest(path.js.destination));
 });
 
 
