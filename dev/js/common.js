@@ -11,7 +11,7 @@ requirejs.config({
             exports: 'jQuery'
         },
         'helperPage': {
-            deps: ['jquery'],
+            deps: ['jquery','Person'],
             exports: 'helperPage'
         },
         'Person': {

@@ -1,1 +1,1 @@
-define(["jquery"],function(n){n(function(){console.log("hello!")}())});
+define(["jquery"],function(e){e(function(){var n;e("form").submit(function(t){t.preventDefault();var a=e(this),i={};switch(a.attr("id")){case"guest":i.name=a.find('input[name="name"]').val();default:n=new Customer(i.name)}console.log(n.greeter("Привет"))})}())});
