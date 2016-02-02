@@ -45,7 +45,7 @@ path = {
 		destination: './public/assets/img'
 	},
 	js: {
-		source: './dev/js/**/*',
+		source: ['./dev/js/**/*', './dev/js/*'],
 		watch: './dev/js/**/*',
 		destination: './public/assets/js'
 	},
@@ -60,12 +60,10 @@ path = {
 
 // Собираем JS
 gulp.task('js', function() {
-	gulp.src(['./dev/js/**/*', './dev/js/*'])
-		.pipe(gulp.dest('./public/assets/js'));
-	gulp.src(['./dev/js/*'])
- 		.pipe(concat('init.min.js'))
+	gulp.src(path.js.source)
+ 	// 	.pipe(concat('init.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./public/assets/js'));
+		.pipe(gulp.dest(path.js.destination));
 });
 
 

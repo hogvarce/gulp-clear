@@ -1,10 +1,1 @@
-// DOM READY
-define(['jquery'], function($){
-
-	$(function () {
-
- 		console.log('hello!');
-
-	}());
-
-});
+define(["jquery"],function(n){n(function(){console.log("hello!")}())});
