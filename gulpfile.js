@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // минификатор
 	csso = require('gulp-csso'),
 	concat = require('gulp-concat'); // Склейка файлов
+	ts = require('gulp-typescript');
 
 // Локальный сервер
 gulp.task('webserver', function() {
@@ -45,8 +46,13 @@ path = {
 		destination: './public/assets/img'
 	},
 	js: {
-		source: ['./dev/js/**/*', './dev/js/*'],
-		watch: './dev/js/**/*',
+		source: ['./dev/js/**/*.js', './dev/js/*.js'],
+		watch: './dev/js/**/*.js',
+		destination: './public/assets/js'
+	},
+	ts: {
+		source: ['./dev/js/**/*.ts', './dev/js/*.ts'],
+		watch: './dev/js/**/*.ts',
 		destination: './public/assets/js'
 	},
 	sprite: {
@@ -61,9 +67,21 @@ path = {
 // Собираем JS
 gulp.task('js', function() {
 	gulp.src(path.js.source)
- 	// 	.pipe(concat('init.min.js'))
+		//  	.pipe(concat('init.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(path.js.destination));
+});
+
+// Собираем typeScript
+gulp.task('ts', function() {
+	gulp.src(path.ts.source)
+ 	// 	.pipe(concat('init.min.js'))
+		.pipe(ts({
+				declaration: true,
+				noExternalResolve: true
+		}))
+		.pipe(uglify())
+		.pipe(gulp.dest(path.ts.destination));
 });
 
 
@@ -126,9 +144,10 @@ gulp.task('watch', function() {
 	gulp.watch(path.img.watch, ['img']).on('change', livereload.changed);
 	gulp.watch(path.html.watch, ['jade']).on('change', livereload.changed);
 	gulp.watch(path.js.watch, ['js']).on('change', livereload.changed);
+	gulp.watch(path.js.watch, ['ts']).on('change', livereload.changed);
 	gulp.watch(path.css.watch, ['stylus']).on('change', livereload.changed);
 });
 
-gulp.task("build", ['sprite', 'img', 'jade', 'fonts', 'js', 'stylus']);
+gulp.task("build", ['sprite', 'img', 'jade', 'fonts', 'js', 'ts','stylus']);
 // Default Task
 gulp.task("default", ['build', 'watch']);
