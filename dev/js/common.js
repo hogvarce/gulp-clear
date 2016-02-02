@@ -3,6 +3,7 @@ requirejs.config({
     paths: {
         jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min',
         helperPage: 'helper-page',
+        Person: 'Person',
         typeScript: 'type'
     },
     shim: {
@@ -13,8 +14,12 @@ requirejs.config({
             deps: ['jquery'],
             exports: 'helperPage'
         },
-        'typeScript': {
+        'Person': {
             deps: ['jquery'],
+            exports: 'Person'
+        },
+        'typeScript': {
+            deps: ['jquery','Person'],
             exports: 'typeScript'
         }
     }

@@ -1,19 +1,11 @@
-class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
+function greeter(person : Person) {
+    return "Привет, " + person.firstname + " " + person.lastname;
 }
 
-var greeter = new Greeter("world");
+var user = {firstname: "Jane", lastname: "User"};
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-}
+var div = document.createElement('div'),
+    txt = document.createTextNode(greeter(user));
 
-document.body.appendChild(button);
+div.appendChild(txt)
+document.body.appendChild(div);

@@ -1,1 +1,1 @@
-var Greeter=function(){function t(t){this.greeting=t}return t.prototype.greet=function(){return"Hello, "+this.greeting},t}(),greeter=new Greeter("world"),button=document.createElement("button");button.textContent="Say Hello",button.onclick=function(){alert(greeter.greet())},document.body.appendChild(button);
+function greeter(e){return"Привет, "+e.firstname+" "+e.lastname}var user={firstname:"Jane",lastname:"User"},div=document.createElement("div"),txt=document.createTextNode(greeter(user));div.appendChild(txt),document.body.appendChild(div);

@@ -144,7 +144,7 @@ gulp.task('watch', function() {
 	gulp.watch(path.img.watch, ['img']).on('change', livereload.changed);
 	gulp.watch(path.html.watch, ['jade']).on('change', livereload.changed);
 	gulp.watch(path.js.watch, ['js']).on('change', livereload.changed);
-	gulp.watch(path.js.watch, ['ts']).on('change', livereload.changed);
+	gulp.watch(path.ts.watch, ['ts']).on('change', livereload.changed);
 	gulp.watch(path.css.watch, ['stylus']).on('change', livereload.changed);
 });
 
