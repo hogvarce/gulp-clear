@@ -77,6 +77,7 @@ gulp.task('ts', function() {
 	gulp.src(path.ts.source)
  	// 	.pipe(concat('init.min.js'))
 		.pipe(ts({
+				target: 'ES5',
 				declaration: true,
 				noExternalResolve: true
 		}))
