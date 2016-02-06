@@ -18,4 +18,5 @@ requirejs.config({
         }
     }
 });
-require(['helperPage'], function (helperPage, todo) { });
+
+require(['helperPage'], function(helperPage, todo){});
