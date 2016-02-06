@@ -8,7 +8,7 @@
                 ul.unstyled
                     li(ng-repeat="todo in todos")
                         input(type="checkbox", ng-model="todo.done")
-                        span.done-{{todo.done}} {{todo.text}}
+                        span(class="done-{{todo.done}}"){{todo.text}}
                 form(ng-submit="addTodo()")
                     input(type="text", ng-model="todoText", size="30", placeholder="впишите новое дело")
                     input(class="btn-primary", type="submit", value="добавить")

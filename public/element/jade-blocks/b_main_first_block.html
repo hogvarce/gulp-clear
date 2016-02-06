@@ -6,7 +6,7 @@
 			<div ng-controller="TodoCtrl"><span>Осталось {{remaining()}} из {{todos.length}}</span>[ <a href="" ng-click="archive()">архив</a> ]
 				<ul class="unstyled">
 					<li ng-repeat="todo in todos">
-						<input type="checkbox" ng-model="todo.done"/><span class="done-">{{todo.done}} {{todo.text}}</span>
+						<input type="checkbox" ng-model="todo.done"/><span class="done-{{todo.done}}">{{todo.text}}</span>
 					</li>
 				</ul>
 				<form ng-submit="addTodo()">
