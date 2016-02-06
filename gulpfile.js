@@ -68,7 +68,7 @@ path = {
 gulp.task('js', function() {
 	gulp.src(path.js.source)
 		//  	.pipe(concat('init.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(path.js.destination));
 });
 
@@ -81,7 +81,7 @@ gulp.task('ts', function() {
 				declaration: true,
 				noExternalResolve: true
 		}))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(path.ts.destination));
 });
 

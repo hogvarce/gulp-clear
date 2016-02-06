@@ -2,27 +2,34 @@ requirejs.config({
     baseUrl: '/assets/js/',
     paths: {
         jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min',
-        helperPage: 'helper-page',
-        Person: 'Person',
-        typeScript: 'type'
+        angular: '//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min',
+        bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min',
+        todo: 'todo'
     },
     shim: {
         'jquery': {
             exports: 'jQuery'
         },
-        'helperPage': {
-            deps: ['jquery','Person'],
-            exports: 'helperPage'
+        'angular': {
+            exports: 'angular'
         },
-        'Person': {
-            deps: ['jquery'],
-            exports: 'Person'
+        'bootstrap': {
+            deps:['jquery'],
+            exports: 'bootstrap'
         },
-        'typeScript': {
-            deps: ['jquery','Person'],
-            exports: 'typeScript'
+        'todo': {
+            deps:['angular'],
+            exports: 'todo'
         }
     }
 });
 
-require(['helperPage', 'typeScript'], function(helperPage, typeScript){});
+require([
+    'jquery',
+    'angular',
+    'bootstrap',
+], function($) {
+    require(['todo'], function(){
+        initApp();
+    });
+});
