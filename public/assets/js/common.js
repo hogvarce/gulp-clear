@@ -3,8 +3,7 @@ requirejs.config({
     paths: {
         jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min',
         angular: '//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min',
-        bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min',
-        todo: 'todo'
+        app: 'app'
     },
     shim: {
         'jquery': {
@@ -13,23 +12,13 @@ requirejs.config({
         'angular': {
             exports: 'angular'
         },
-        'bootstrap': {
-            deps:['jquery'],
-            exports: 'bootstrap'
-        },
-        'todo': {
+        'app': {
             deps:['angular'],
-            exports: 'todo'
+            exports: 'app'
         }
     }
 });
 
-require([
-    'jquery',
-    'angular',
-    'bootstrap',
-], function($) {
-    require(['todo'], function(){
-        initApp();
-    });
+require(['app'], function(){
+    angular.bootstrap(document, ['app']);
 });

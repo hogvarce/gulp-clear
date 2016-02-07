@@ -1,14 +1,5 @@
-.container
+.container(ng-app="app")
     .row
-        .col-xs-12(ng-app="App")
-            h2 Список дел   
-            div(ng-controller="TodoCtrl")
-                span Осталось {{remaining()}} из {{todos.length}}
-                [ <a href="" ng-click="archive()">архив</a> ]
-                ul.unstyled
-                    li(ng-repeat="todo in todos")
-                        input(type="checkbox", ng-model="todo.done")
-                        span(class="done-{{todo.done}}"){{todo.text}}
-                form(ng-submit="addTodo()")
-                    input(type="text", ng-model="todoText", size="30", placeholder="впишите новое дело")
-                    input(class="btn-primary", type="submit", value="добавить")
+        .col-xs-12
+            h2 Список дел
+            p(ng-controller="myCtrl") {{ firstName + " " + lastName }}
