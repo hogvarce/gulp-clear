@@ -1,6 +1,12 @@
-var app = angular.module("app", []);
+define(['jquery'], function($){
 
-app.controller("TodoListController", function($scope) {
+
+var app = angular.module("app", []);
+app.controller("myCtrl", function($scope) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
+});
+
+$('body').animate({'opacity':1},300);
+
 });
