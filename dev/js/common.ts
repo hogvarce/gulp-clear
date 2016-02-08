@@ -12,11 +12,7 @@ requirejs.config({
         'helperPage': {
             deps: ['jquery'],
             exports: 'helperPage'
-        },
-        'todo': {
-            exports: 'todo'
         }
-    }
+    },
+    deps: ['helperPage']
 });
-
-require(['helperPage'], function(helperPage, todo){});

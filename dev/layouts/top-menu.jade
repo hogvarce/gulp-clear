@@ -1,0 +1,21 @@
+section.top-menu#Top
+    .wrapper 
+        .container
+            .row
+                .pull-left
+                    a(href="/")
+                        img(src="/assets/img/logo.jpg" alt="Логотип URBO")
+                .pull-right
+                    nav.nav
+                        ul.list-inline
+                            - var items = [];
+                            - items.push({'title':'Главная', 'link':'#Top'});
+                            - items.push({'title':'Схема зала', 'link':'#Sсhema'});
+                            - items.push({'title':'Групповые занятия', 'link':'#Groops'});
+                            - items.push({'title':'Дополнительные услуги', 'link':'#Services'});
+                            - items.push({'title':'Аренда', 'link':'#Services'});
+                            - items.push({'title':'Контакты', 'link':'#Contacts'});
+                            each item, i in items
+                                li
+                                    a(href="#{item.link}").nav__link 
+                                        span !{item.title}

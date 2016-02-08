@@ -5,8 +5,7 @@
 		<meta charset="UTF-8"/>
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title> </title>
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
+		<title>URBO</title>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="/assets/css/css.css"/>
 		<!--if lt IE 9
@@ -15,9 +14,30 @@
 		-->
 	</head>
 	<body>
+		<section id="Top" class="top-menu">
+			<div class="wrapper"> 
+				<div class="container">
+					<div class="row">
+						<div class="pull-left"><a href="/"><img src="/assets/img/logo.jpg" alt="Логотип URBO"/></a></div>
+						<div class="pull-right">
+							<nav class="nav">
+								<ul class="list-inline">
+									<li><a href="#Top" class="nav__link"> <span>Главная</span></a></li>
+									<li><a href="#Sсhema" class="nav__link"> <span>Схема зала</span></a></li>
+									<li><a href="#Groops" class="nav__link"> <span>Групповые занятия</span></a></li>
+									<li><a href="#Services" class="nav__link"> <span>Дополнительные услуги</span></a></li>
+									<li><a href="#Services" class="nav__link"> <span>Аренда</span></a></li>
+									<li><a href="#Contacts" class="nav__link"> <span>Контакты</span></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<header id="header" class="header">
 			<div class="wrapper">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="header-top"></div>
@@ -39,7 +59,6 @@
 				</div>
 			</div>
 		</footer><!-- import scripts -->
-		<script src="/assets/js/lib/require.js"></script>
-		<script src="/assets/js/common.js"></script>
+		<script src="/assets/js/lib/require.js" data-main="assets/js/common.js"></script>
 	</body>
 </html>
