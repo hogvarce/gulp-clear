@@ -2,18 +2,8 @@
 <div ng-app="" class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2>Список дел</h2>
-			<div ng-controller="TodoCtrl"><span>Осталось {{remaining()}} из {{todos.length}}</span>[ <a href="" ng-click="archive()">архив</a> ]
-				<ul class="unstyled">
-					<li ng-repeat="todo in todos">
-						<input type="checkbox" ng-model="todo.done"/><span class="done-{{todo.done}}">{{todo.text}}</span>
-					</li>
-				</ul>
-				<form ng-submit="addTodo()">
-					<input type="text" ng-model="todoText" size="30" placeholder="впишите новое дело"/>
-					<input type="submit" value="добавить" class="btn-primary"/>
-				</form>
-			</div>
+			<input type="text" ng-model="data.message"/>
+			<h1>{{data.message}}</h1>
 		</div>
 	</div>
 </div>

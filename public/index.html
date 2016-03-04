@@ -9,8 +9,6 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="/assets/css/css.css"/>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-		<script src="/assets/js/todo.js"></script>
 		<!--if lt IE 9
 		script(src='//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
 		script(src='//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
@@ -33,18 +31,8 @@
 				<div ng-app="" class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<h2>Список дел</h2>
-							<div ng-controller="TodoCtrl"><span>Осталось {{remaining()}} из {{todos.length}}</span>[ <a href="" ng-click="archive()">архив</a> ]
-								<ul class="unstyled">
-									<li ng-repeat="todo in todos">
-										<input type="checkbox" ng-model="todo.done"/><span class="done-{{todo.done}}">{{todo.text}}</span>
-									</li>
-								</ul>
-								<form ng-submit="addTodo()">
-									<input type="text" ng-model="todoText" size="30" placeholder="впишите новое дело"/>
-									<input type="submit" value="добавить" class="btn-primary"/>
-								</form>
-							</div>
+							<input type="text" ng-model="data.message"/>
+							<h1>{{data.message}}</h1>
 						</div>
 					</div>
 				</div>
@@ -59,5 +47,8 @@
 				</div>
 			</div>
 		</footer><!-- import scripts -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+		<script src="/assets/js/todo.js"></script>
+		<script src="/assets/js/test.js"></script>
 	</body>
 </html>
