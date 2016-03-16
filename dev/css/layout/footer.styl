@@ -1,31 +1,52 @@
 ﻿@import "variables.styl"
 .footer
-	min-height 120px
-	background-color $colorLightGray
-	padding-top 30px
-	.phone
-		font-size 26px
-		position relative
-		top 15px
-	.creater
-		position relative
-		top 15px
+	background-color #ebebeb
+	padding 40px 0px
+	a
+		color inherit
+		text-decoration: underline
+	.social
+		margin-bottom 20px
+		.fa
+			font-size 30px
+			float left
+			margin-right: 8px
+			color #ebebeb
+			background-color #666666
+			border-radius 50%
+			width 40px
+			height 40px
+			text-align: center
+			line-height: 40px
+			&:hover
+				background-color $colorLightBlue
+	.right
+		text-align right
+	.partners
+		margin-bottom 20px
+		img
+			float right
+			margin-left: 30px
+	.developer
+		margin-top 30px
+		p
+			margin-top 15px
 
-@media only screen and (max-width: 768px)
+@media(max-width: 960px)
 	.footer
-		.logo-footer
-			min-width 220px
-		.phone
-			top -25px
-			&:after
-				display block
-				content "Телефон горячей линии"
-				font-size 11px
-				margin 0 auto
-		.creater
-			text-align center
-			top -10px
-		.text-left
-			> img
-				display block
-				margin 0 auto
+		.left,
+		.right
+			text-align: left;
+		.left
+			padding-bottom 20px
+		.right
+			border-top 1px solid #dddddd
+			padding-top 20px
+		.partners
+			img
+				float left
+				margin-left 0px
+				margin-right: 30px
+		.developer
+			p
+				font-size: .8em;

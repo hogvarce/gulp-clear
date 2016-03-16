@@ -1,29 +1,114 @@
 ﻿@import "variables.styl"
+
 .header
-	padding-top 25px
-	padding-bottom 35px
-	background-color #fff
-	.logo
-		max-width 80%
-		 img
-			width 100%
-			max-width 350px
-	.slogan
-		display block
-		font-size 19px
-		margin 10px 0px 0px 25px
+	height 50px
+	width 100%
+	min-width 100%
+	background-color $colorGreen
+	color #fff
+	position fixed
+	z-index 999
+	top 0px
+	a
+		color inherit
+		border-bottom 1px solid
+		text-decoration none
+		&:hover
+			border-bottom 0px
+		&.active
+			font-weight bold
+			border-bottom 0px
+	ul
+		font-size 16px
+		li
+			margin-right 40px
+			padding-top 13px
+	.contact
+		height 50px
+		background-color $colorBlue
+		padding 0 25px
+		& > .phone
+			margin-top 10px
+			float right
+		& > .call
+			margin-top 15px
+			float left
+			a
+				text-decoration none
+				border-bottom 1px dashed
+				margin-top 13px
 	.phone
-		margin-top -5px
-		line-height 18px
-		&--blue
-			color $colorLightBlue
-			font-size 21px
-		small
-			margin-bottom -5px
-	.toggle-mobile-menu
-		font-size 30px
-		line-height 30px
-		margin-top -5px
-		margin-left 20px
-		color $colorLightBlue
+		font-size 22px
+		font-family $fontPFDinMedium
+	.mobile-menu-toggle
+		position absolute
+		right 30px
+		top 10px
+		font-size 35px
 		cursor pointer
+
+.mobile-menu
+	position fixed
+	width 100%
+	z-index 999
+	top -430px
+	background-color #f2f2f2
+	color #000000
+	font-size 18px
+	padding-bottom 200px
+	-webkit-transition all 1s
+	-moz-transition all 1s
+	-o-transition all 1s
+	transition all 1s 
+	 &.active
+			top 0px
+	li
+		margin-top 30px
+	a
+		color inherit
+		text-decoration underline
+		&.active
+			font-weight bold
+	.mobile-menu-toggle
+		position: absolute
+		right: 30px
+		top 10px
+		font-size 35px
+		cursor pointer
+
+@media (max-width: 1200px)
+	.header
+		ul
+			li
+				margin-right 10px
+				font-size 12px
+		.contact
+			& > .phone
+				font-size 17px
+				margin-top 13px
+@media (max-width: 960px)
+	.header
+		.contact
+			& > .phone
+				font-size 13px
+			& > .call
+				font-size 10px
+@media (max-width: 768px)
+	.header
+		.contact
+			height 100px
+			& > .phone,
+			& > .call
+				float none
+				text-align left
+				width calc(100% + 50px)
+				margin-left -25px
+				padding-left 25px
+			& > .phone
+				font-size 24px
+			& > .call
+				background-color $colorGreen
+				height 50px
+				line-height 40px
+				font-size 20px
+				text-align: center;

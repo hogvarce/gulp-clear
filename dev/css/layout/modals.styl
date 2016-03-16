@@ -1,0 +1,56 @@
+@import "variables.styl"
+
+.form
+    width 430px
+    max-width 100%
+    padding-bottom: 25px
+    input
+        width 330px
+        max-width 100%
+        display: block
+        margin 10px auto 0
+        height 37px
+        line-height: 35px
+        padding 0px 10px
+        border 1px solid $colorLightGray
+        &:focus,
+        &:hover
+            border-color $colorBlue
+    select
+        @extend .form input
+    .btn
+        @extend .screen-1-btn a
+        margin: 35px auto
+        display: block
+        width 200px
+        padding 10px 0px
+
+.select2-container
+    z-index: 9999
+    @extend .form input
+
+.select2-container--default .select2-selection--single
+    border 0 
+    height auto
+.select2-container .select2-selection--single .select2-selection__rendered
+    padding 0
+.modals
+    &-title
+        width 100%
+        border-bottom 1px solid $colorLightGray
+        font-family $fontPFDinReqular
+        font-weight: bold
+        letter-spacing: 2px
+        font-size 24px
+        text-transform uppercase
+        text-align center
+        padding 25px 0px
+        margin-bottom: 30px
+.fancybox-close
+        width 18px
+        height 17px
+        background: url($pathImg + 'cross.png') no-repeat 0 0
+        right 30px
+        top 30px
+        &:hover
+            background-position: 0 100%

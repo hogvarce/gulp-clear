@@ -1,0 +1,89 @@
+@import "variables.styl"
+
+.screen
+    &-1
+        position relative
+        .logo
+            margin-top 45px
+        .pull-right
+            position relative
+        .consult
+            position absolute
+            right 65px
+            top 20px
+            background-color $colorGreen
+            width 130px
+            height 130px
+            border-radius 50%
+            color #fff
+            font-size 13px
+            padding-top 35px
+        .star
+            font-size 12px
+        .star.hidden-xs
+            margin-right 25px
+        &-title
+            font-size 34px
+            font-family $fontPFDinReqular
+            font-weight bold
+            text-transform uppercase
+            letter-spacing: 2px
+            margin-top 60px
+        &-text
+            font-size 18px
+            font-family $fontPFDinReqular
+            margin-top 25px
+        &-price
+            font-size 100px
+            font-family $fontPFDinMedium
+            text-transform uppercase
+            i
+                font-size 85px
+        &-btn
+            a
+                background-color $colorLightBlue
+                padding 15px 25px
+                font-size 18px
+                font-family $fontPFDinReqular
+                font-weight: bold
+                letter-spacing: 2px
+                color #fff
+                text-transform uppercase
+                border-radius 5px
+        &-hint
+            font-size 11px
+            color $colorLightBlue
+            margin-top 20px
+    &-2
+        &-title
+            @extend .screen-1-title
+            display block
+            margin 90px auto 30px
+            text-align: center;
+
+@media (max-width: 1200px)
+    .screen
+        &-1
+            .consult
+                right 50px
+            .pull-right
+                img
+                    max-width 100%
+@media (max-width: 768px)
+    .screen
+        &-1
+            .logo
+                text-align center
+            .consult
+                font-size 11px
+                width 100px
+                height 100px
+                padding-top 30px
+                right 0px
+            &-price
+                font-size 85px
+                i
+                    font-size 70px
+            .pull-right,
+            .pull-left
+                text-align: center;

@@ -6,8 +6,6 @@
 // - fonts
 // @import "../fonts/constantine/font.css"
 
-@import "../element/css-blocks/b_main_first_block.styl"
-
 
 *
     margin 0
@@ -17,3 +15,16 @@
 html,
 body
     height 100%
+    color $colorGraffit
+    font-family  $fontOpenSans
+body
+    padding-top 50px
+
+@media (max-width: 768px)
+    body
+        padding-top 100px
+
+@import "./layout/header.styl"
+@import "./layout/screen.styl"
+@import "./layout/modals.styl"
+@import "./layout/footer.styl"

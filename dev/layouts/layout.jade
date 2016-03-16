@@ -1,13 +1,12 @@
 ﻿//- layout.jade
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!DOCTYPE html>
 html
 	head
 		include head.jade
 	body
 			include header
-			section#content.content
-				.wrapper
-					block content
+			include /element/jade-blocks/screen-1
+			include /element/jade-blocks/screen-2
 			include footer
+			include modals
 			include scripts

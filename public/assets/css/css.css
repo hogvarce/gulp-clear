@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'PFDinReqular';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular_1-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinMedium';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +20,428 @@
 html,
 body {
   height: 100%;
+  color: #292929;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  padding-top: 50px;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+}
+@font-face {
+  font-family: 'PFDinReqular';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular_1-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinMedium';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  height: 50px;
+  width: 100%;
+  min-width: 100%;
+  background-color: #94c11f;
+  color: #fff;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+}
+.header a {
+  color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+.header a:hover {
+  border-bottom: 0px;
+}
+.header a.active {
+  font-weight: bold;
+  border-bottom: 0px;
+}
+.header ul {
+  font-size: 16px;
+}
+.header ul li {
+  margin-right: 40px;
+  padding-top: 13px;
+}
+.header .contact {
+  height: 50px;
+  background-color: #2ba4d8;
+  padding: 0 25px;
+}
+.header .contact > .phone {
+  margin-top: 10px;
+  float: right;
+}
+.header .contact > .call {
+  margin-top: 15px;
+  float: left;
+}
+.header .contact > .call a {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  margin-top: 13px;
+}
+.header .phone {
+  font-size: 22px;
+  font-family: 'PFDinMedium', sans-serif;
+}
+.header .mobile-menu-toggle {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 35px;
+  cursor: pointer;
+}
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: -430px;
+  background-color: #f2f2f2;
+  color: #000;
+  font-size: 18px;
+  padding-bottom: 200px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.mobile-menu.active {
+  top: 0px;
+}
+.mobile-menu li {
+  margin-top: 30px;
+}
+.mobile-menu a {
+  color: inherit;
+  text-decoration: underline;
+}
+.mobile-menu a.active {
+  font-weight: bold;
+}
+.mobile-menu .mobile-menu-toggle {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 35px;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .header ul li {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .header .contact > .phone {
+    font-size: 17px;
+    margin-top: 13px;
+  }
+}
+@media (max-width: 960px) {
+  .header .contact > .phone {
+    font-size: 13px;
+  }
+  .header .contact > .call {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .header .contact {
+    height: 100px;
+  }
+  .header .contact > .phone,
+  .header .contact > .call {
+    float: none;
+    text-align: left;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    padding-left: 25px;
+  }
+  .header .contact > .phone {
+    font-size: 24px;
+  }
+  .header .contact > .call {
+    background-color: #94c11f;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@font-face {
+  font-family: 'PFDinReqular';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular_1-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinMedium';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.screen-1 {
+  position: relative;
+}
+.screen-1 .logo {
+  margin-top: 45px;
+}
+.screen-1 .pull-right {
+  position: relative;
+}
+.screen-1 .consult {
+  position: absolute;
+  right: 65px;
+  top: 20px;
+  background-color: #94c11f;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  padding-top: 35px;
+}
+.screen-1 .star {
+  font-size: 12px;
+}
+.screen-1 .star.hidden-xs {
+  margin-right: 25px;
+}
+.screen-1-title,
+.screen-2-title {
+  font-size: 34px;
+  font-family: 'PFDinReqular', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 60px;
+}
+.screen-1-text {
+  font-size: 18px;
+  font-family: 'PFDinReqular', sans-serif;
+  margin-top: 25px;
+}
+.screen-1-price {
+  font-size: 100px;
+  font-family: 'PFDinMedium', sans-serif;
+  text-transform: uppercase;
+}
+.screen-1-price i {
+  font-size: 85px;
+}
+.screen-1-btn a,
+.form .btn {
+  background-color: #53ccff;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-family: 'PFDinReqular', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.screen-1-hint {
+  font-size: 11px;
+  color: #53ccff;
+  margin-top: 20px;
+}
+.screen-2-title {
+  display: block;
+  margin: 90px auto 30px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .screen-1 .consult {
+    right: 50px;
+  }
+  .screen-1 .pull-right img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .screen-1 .logo {
+    text-align: center;
+  }
+  .screen-1 .consult {
+    font-size: 11px;
+    width: 100px;
+    height: 100px;
+    padding-top: 30px;
+    right: 0px;
+  }
+  .screen-1-price {
+    font-size: 85px;
+  }
+  .screen-1-price i {
+    font-size: 70px;
+  }
+  .screen-1 .pull-right,
+  .screen-1 .pull-left {
+    text-align: center;
+  }
+}
+@font-face {
+  font-family: 'PFDinReqular';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular_1-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinMedium';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.form {
+  width: 430px;
+  max-width: 100%;
+  padding-bottom: 25px;
+}
+.form input,
+.form select,
+.select2-container {
+  width: 330px;
+  max-width: 100%;
+  display: block;
+  margin: 10px auto 0;
+  height: 37px;
+  line-height: 35px;
+  padding: 0px 10px;
+  border: 1px solid #e1e1e1;
+}
+.form input:focus,
+.form select:focus,
+.select2-container:focus,
+.form input:hover,
+.form select:hover,
+.select2-container:hover {
+  border-color: #2ba4d8;
+}
+.form .btn {
+  margin: 35px auto;
+  display: block;
+  width: 200px;
+  padding: 10px 0px;
+}
+.select2-container {
+  z-index: 9999;
+}
+.select2-container--default .select2-selection--single {
+  border: 0;
+  height: auto;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+}
+.modals-title {
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: 'PFDinReqular', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px 0px;
+  margin-bottom: 30px;
+}
+.fancybox-close {
+  width: 18px;
+  height: 17px;
+  background: url("/assets/img/cross.png") no-repeat 0 0;
+  right: 30px;
+  top: 30px;
+}
+.fancybox-close:hover {
+  background-position: 0 100%;
+}
+@font-face {
+  font-family: 'PFDinReqular';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular_1-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinMedium';
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot");
+  src: url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.eot?#iefix") format('embedded-opentype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff2") format('woff2'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.woff") format('woff'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.ttf") format('truetype'), url("/assets/fonts/pfdin/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.footer {
+  background-color: #ebebeb;
+  padding: 40px 0px;
+}
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.footer .social {
+  margin-bottom: 20px;
+}
+.footer .social .fa {
+  font-size: 30px;
+  float: left;
+  margin-right: 8px;
+  color: #ebebeb;
+  background-color: #666;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.footer .social .fa:hover {
+  background-color: #53ccff;
+}
+.footer .right {
+  text-align: right;
+}
+.footer .partners {
+  margin-bottom: 20px;
+}
+.footer .partners img {
+  float: right;
+  margin-left: 30px;
+}
+.footer .developer {
+  margin-top: 30px;
+}
+.footer .developer p {
+  margin-top: 15px;
+}
+@media (max-width: 960px) {
+  .footer .left,
+  .footer .right {
+    text-align: left;
+  }
+  .footer .left {
+    padding-bottom: 20px;
+  }
+  .footer .right {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  .footer .partners img {
+    float: left;
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+  .footer .developer p {
+    font-size: 0.8em;
+  }
 }

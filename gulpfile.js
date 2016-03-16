@@ -1,10 +1,11 @@
 var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	webserver = require('gulp-webserver'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
 	imagemin = require('gulp-imagemin'),
 	jade = require('gulp-jade'),
-	jadeOrig = require('jade');
+	jade = require('gulp-jade-php'),
+	jadeOrig = require('jade'),
 	stylus = require('gulp-stylus'),
 	sourcemaps = require('gulp-sourcemaps'),
 	spritesmith = require('gulp.spritesmith'),
@@ -105,7 +106,7 @@ gulp.task('sprite', function() {
 gulp.task('stylus', function() {
 	gulp.src(path.css.source)
 		.pipe(stylus())
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'ie 11', 'ie 12', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(autoprefixer(['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'ie 11', 'ie 12', 'opera 12.1', 'ios 6', 'android 4']))
 		.pipe(concat(path.css.distribution)) // file views
 		//.pipe(csso())
 		.pipe(gulp.dest(path.css.destination)); // out place
