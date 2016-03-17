@@ -6,12 +6,16 @@ requirejs.config({
         fancybox: '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack',
         bxSlider: '//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min',
         select2: '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min',
+        wow: '//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min',
         app: 'app',
         helperPage: 'helper-page'
     },
     shim: {
         'jquery': {
             exports: 'jQuery'
+        },
+        'wow': {
+            exports: 'wow'
         },
         'select2': {
             deps: ['jquery'],
@@ -30,7 +34,7 @@ requirejs.config({
             exports: 'app'
         },
         'helperPage': {
-            deps: ['jquery', 'fancybox', 'bxSlider', 'select2', 'app'],
+            deps: ['jquery', 'fancybox', 'bxSlider', 'select2', 'wow', 'app'],
             exports: 'helperPage'
         }
     },

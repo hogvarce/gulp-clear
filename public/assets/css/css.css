@@ -218,7 +218,9 @@ body {
   margin-right: 25px;
 }
 .screen-1-title,
-.screen-2-title {
+.screen-2-title,
+.screen-3-title,
+.screen-4-title {
   font-size: 34px;
   font-family: 'PFDinReqular', sans-serif;
   font-weight: bold;
@@ -240,6 +242,7 @@ body {
   font-size: 85px;
 }
 .screen-1-btn a,
+.writeNow-btn a,
 .form .btn {
   background-color: #53ccff;
   padding: 15px 25px;
@@ -256,10 +259,185 @@ body {
   color: #53ccff;
   margin-top: 20px;
 }
-.screen-2-title {
+.screen-2-title,
+.screen-3-title,
+.screen-4-title {
   display: block;
   margin: 90px auto 30px;
   text-align: center;
+  font-size: 44px;
+}
+.screen-2 .bxslider {
+  opacity: 0;
+}
+.screen-2 .bxslider-title {
+  font-family: 'PFDinReqular', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.screen-2 .bxslider-text {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+}
+.screen-3-title,
+.screen-4-title {
+  margin-top: 60px;
+}
+.screen-3 .bx-wrapper {
+  margin: 0 auto;
+  min-width: 100%;
+}
+.screen-3 .bx-wrapper .name {
+  font-family: 'PFDinReqular', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 20px auto;
+  display: block;
+}
+.screen-3 .bx-wrapper .spec {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #8e8e8e;
+  margin-bottom: 20px;
+}
+.screen-3 .bx-wrapper .text {
+  font-size: 13px;
+  font-weight: lighter;
+}
+.screen-4-subtitle {
+  font-size: 30px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'PFDinReqular', sans-serif;
+  margin-top: -20px;
+}
+.subway_map {
+  background: url("http://intan.ru/images/metromap.png") no-repeat scroll 0 0 transparent;
+  height: 688px;
+  position: relative;
+  width: 660px;
+  z-index: 1;
+  margin: auto;
+}
+.subway_map div {
+  background: url("/assets/img/sprite.png") 0px 0px no-repeat;
+  display: block;
+  height: 24px;
+  position: absolute;
+  width: 25px;
+  z-index: 2;
+  margin-left: 0px;
+  margin-top: 1px;
+}
+.bx-wrapper {
+  border: 0;
+  box-shadow: none;
+  padding: 0px 115px;
+}
+.bx-wrapper .bx-prev {
+  background: url("/assets/img/slide-arrows.png") no-repeat 0 0;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 100%;
+}
+.bx-wrapper .bx-next {
+  background: url("/assets/img/slide-arrows.png") no-repeat 100% 0;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: 100% 100%;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 25px;
+  height: 47px;
+}
+#bx-pager {
+  padding: 0px 115px;
+}
+#bx-pager a {
+  float: left;
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+#bx-pager a.active .num {
+  background-color: #2ba4d8;
+  border-color: #2ba4d8;
+  color: #fff;
+}
+#bx-pager a:hover,
+#bx-pager a:focus {
+  text-decoration: none;
+}
+#bx-pager a:before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 90px;
+  background-color: #94c11f;
+  position: absolute;
+  left: -45px;
+  top: 20px;
+}
+#bx-pager a:first-child:before {
+  display: none;
+}
+#bx-pager a .num {
+  font-size: 30px;
+  border-radius: 50%;
+  font-family: 'PFDinReqular', sans-serif;
+  font-weight: lighter;
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #94c11f;
+  text-align: center;
+}
+#bx-pager a .desc {
+  font-size: 13px;
+  color: #000;
+  font-weight: lighter;
+}
+.writeNow {
+  margin: 65px auto 0px;
+  width: 100%;
+  min-width: 100%;
+  background-color: #94c11f;
+  color: #fff;
+  padding: 50px 250px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.writeNow.second {
+  text-align: left;
+}
+.writeNow.second img {
+  margin-bottom: -50px;
+  max-width: 100%;
+}
+.writeNow-title,
+.writeNow-title-light {
+  font-size: 40px;
+  font-family: 'PFDinReqular', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.writeNow-title-light {
+  line-height: 35px;
+  font-family: 'PFDinReqular', sans-serif;
+  font-weight: 100;
+}
+.writeNow-btn {
+  margin-top: 10px;
 }
 @media (max-width: 1200px) {
   .screen-1 .consult {
@@ -270,6 +448,56 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .bx-wrapper {
+    padding: 0 20px;
+  }
+  .bx-wrapper .bx-controls-direction a {
+    top: 80px;
+  }
+  .bx-wrapper img {
+    margin: 0 auto 20px;
+  }
+  #bx-pager {
+    padding: 0 20px;
+  }
+  #bx-pager a {
+    display: none;
+    margin: 0 auto;
+    float: none;
+  }
+  #bx-pager a:first-child:before {
+    display: none !important;
+  }
+  #bx-pager a:last-child:after {
+    display: none !important;
+  }
+  #bx-pager a.active {
+    display: block;
+  }
+  #bx-pager a.active:before,
+  #bx-pager a.active:after {
+    background-color: #e9e9e9;
+    width: 48px;
+    height: 1px;
+    left: -20px;
+    top: 20px;
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  #bx-pager a.active:after {
+    left: auto;
+    right: -20px;
+  }
+  .writeNow {
+    padding: 50px 0px;
+  }
+  .writeNow.second {
+    text-align: center;
+  }
+  .writeNow.second img {
+    margin-top: 20px;
+  }
   .screen-1 .logo {
     text-align: center;
   }
@@ -367,6 +595,12 @@ body {
 }
 .fancybox-close:hover {
   background-position: 0 100%;
+}
+@media (max-width: 768px) {
+  .fancybox-close {
+    top: 10px;
+    right: 10px;
+  }
 }
 @font-face {
   font-family: 'PFDinReqular';
