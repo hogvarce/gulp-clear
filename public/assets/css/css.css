@@ -26,6 +26,9 @@ body {
 body {
   padding-top: 50px;
 }
+.fancybox-opened {
+  z-index: 9999;
+}
 @media (max-width: 768px) {
   body {
     padding-top: 100px;
@@ -49,10 +52,11 @@ body {
   height: 50px;
   width: 100%;
   min-width: 100%;
+  max-width: 100%;
   background-color: #94c11f;
   color: #fff;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   top: 0px;
 }
 .header a {
@@ -106,7 +110,7 @@ body {
 .mobile-menu {
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 99999;
   top: -430px;
   background-color: #f2f2f2;
   color: #000;
@@ -192,6 +196,7 @@ body {
 }
 .screen-1 {
   position: relative;
+  overflow: hidden;
 }
 .screen-1 .logo {
   margin-top: 45px;
@@ -244,7 +249,7 @@ body {
 .screen-1-btn a,
 .writeNow-btn a,
 .form .btn {
-  background-color: #53ccff;
+  background-color: #2ba4d8;
   padding: 15px 25px;
   font-size: 18px;
   font-family: 'PFDinReqular', sans-serif;
@@ -254,10 +259,34 @@ body {
   text-transform: uppercase;
   border-radius: 5px;
 }
+.screen-1-btn a:hover,
+.writeNow-btn a:hover,
+.form .btn:hover {
+  background-color: #53ccff;
+  text-decoration: none;
+}
 .screen-1-hint {
   font-size: 11px;
   color: #53ccff;
   margin-top: 20px;
+}
+.screen-1.twins .girl {
+  position: relative;
+  right: 130px;
+}
+.screen-1.twins .consult {
+  left: 150px;
+}
+.screen-1.twins .screen-1-text {
+  margin-top: 0px;
+}
+.screen-1.twins .screen-1-btn a {
+  font-size: 20px;
+}
+.screen-1.twins .girl-mobile {
+  position: relative;
+  right: -15px;
+  margin-bottom: -30px;
 }
 .screen-2-title,
 .screen-3-title,
@@ -561,6 +590,7 @@ body {
     height: 100px;
     padding-top: 30px;
     right: 0px;
+    position: absolute;
   }
   .screen-1-price {
     font-size: 85px;
@@ -571,6 +601,24 @@ body {
   .screen-1 .pull-right,
   .screen-1 .pull-left {
     text-align: center;
+  }
+  .screen-1 .pull-right img {
+    margin-bottom: -30px;
+  }
+  .screen-1.twins .consult {
+    left: 20px;
+    top: 40px;
+    font-size: 14px;
+    width: 130px;
+    height: 130px;
+  }
+  .screen-2 .bxslider-text,
+  .screen-2 .bxslider-title {
+    text-align: center;
+  }
+  .screen-2 .bxslider-text br,
+  .screen-2 .bxslider-title br {
+    display: none;
   }
 }
 @font-face {

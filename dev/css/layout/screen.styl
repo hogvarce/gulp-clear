@@ -4,6 +4,7 @@
 .screen
     &-1
         position relative
+        overflow hidden
         .logo
             margin-top 45px
         .pull-right
@@ -42,7 +43,7 @@
                 font-size 85px
         &-btn
             a
-                background-color $colorLightBlue
+                background-color $colorBlue
                 padding 15px 25px
                 font-size 18px
                 font-family $fontPFDinReqular
@@ -51,10 +52,27 @@
                 color #fff
                 text-transform uppercase
                 border-radius 5px
+                &:hover
+                    background-color $colorLightBlue
+                    text-decoration: none;
         &-hint
             font-size 11px
             color $colorLightBlue
             margin-top 20px
+        &.twins
+            .girl
+                position relative
+                right 130px
+            .consult
+                left 150px
+            .screen-1-text
+                margin-top 0px
+            .screen-1-btn a
+                font-size 20px
+            .girl-mobile
+                position: relative;
+                right -15px
+                margin-bottom -30px
     &-2
         &-title
             @extend .screen-1-title
@@ -324,6 +342,7 @@
                 height 100px
                 padding-top 30px
                 right 0px
+                position: absolute;
             &-price
                 font-size 85px
                 i
@@ -331,3 +350,19 @@
             .pull-right,
             .pull-left
                 text-align: center;
+            .pull-right
+                img
+                    margin-bottom: -30px
+            &.twins
+                .consult
+                    left 20px
+                    top: 40px;
+                    font-size: 14px;
+                    width: 130px;
+                    height: 130px
+        &-2
+            .bxslider-text,
+            .bxslider-title
+                text-align: center;
+                br
+                    display: none

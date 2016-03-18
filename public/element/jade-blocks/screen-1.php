@@ -7,7 +7,7 @@
 					<div class="logo"><a href="/"><img src="/assets/img/logo.png" alt="Логотип Интан"/></a></div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="col-xs-12 col-sm-6 pull-right animated fadeInRight"><img src="/assets/img/tooth.png" alt="Акция"/>
+				<div class="col-xs-12 col-sm-6 pull-right"><img src="/assets/img/tooth.png" alt="Акция" class="animated fadeInRight hidden-xs"/><img src="/assets/img/tooth-mobile.png" alt="Акция" class="animated fadeInRight visible-xs"/>
 					<div class="consult text-center animated bounceInDown"><span>Консультация<br/>имплантолога<br/>бесплатно</span></div>
 					<div class="clearfix"></div>
 					<div class="star hidden-xs pull-right"> <span><sup>*</sup>Благодаря широкому ассортименту конструкций и материалов<br/>можно подобрать вариант, максимально соответствующий<br/>особенностям клинической ситуации. </span></div>

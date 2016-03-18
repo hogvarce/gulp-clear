@@ -53,7 +53,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="accia" class="screen-1">
+		<section id="accia" class="screen-1 twins">
 			<div class="wrapper">
 				<div class="container">
 					<div class="row">
@@ -61,16 +61,14 @@
 							<div class="logo"><a href="/"><img src="/assets/img/logo.png" alt="Логотип Интан"/></a></div>
 						</div>
 						<div class="clearfix"></div>
-						<div class="col-xs-12 col-sm-6 pull-right animated fadeInRight"><img src="/assets/img/tooth.png" alt="Акция"/>
+						<div class="col-xs-12 col-sm-6 pull-right"><img src="/assets/img/girl.png" alt="Акция" class="girl hidden-xs animated fadeInRight"/><img src="/assets/img/girl-mobile.png" alt="Акция" class="girl-mobile visible-xs animated fadeInRight"/>
 							<div class="consult text-center animated bounceInDown"><span>Консультация<br/>имплантолога<br/>бесплатно</span></div>
 							<div class="clearfix"></div>
-							<div class="star hidden-xs pull-right"> <span><sup>*</sup>Благодаря широкому ассортименту конструкций и материалов<br/>можно подобрать вариант, максимально соответствующий<br/>особенностям клинической ситуации. </span></div>
 						</div>
 						<div class="col-xs-12 col-sm-6 pull-left animated fadeInLeft">
 							<div class="screen-1-title"><span>Имплантат с установкой,<br/>по выгодной цене</span></div>
-							<div class="screen-1-text"><span>В стоимость входит имплантат Adin (Израиль)<br/>и операция по установке! Имплантаты —<br/>это самый современный способ зубного<br/>протезирования.</span></div>
-							<div class="star visible-xs"><span><sup>*</sup>Благодаря широкому ассортименту конструкций и материалов<br/>можно подобрать вариант, максимально соответствующий<br/>особенностям клинической ситуации. </span></div>
-							<div class="screen-1-price"><span>12 900 <i class="fa fa-rub"></i></span></div>
+							<div class="screen-1-price"><span>12 900 <i class="fa fa-rub"></i>    </span></div>
+							<div class="screen-1-text"><span>В стоимость входит имплантат Adin (Израиль) и операция по установке! Имплантаты — это самый современный способ зубного протезирования. Благодаря широкому ассортименту конструкций и материалов можно подобрать вариант, максимально соответствующий особенностям клинической ситуации. </span></div><br/><br/>
 							<div class="screen-1-btn"><a href="#write" class="fancybox"><span>Записаться на прием</span></a></div>
 							<div class="screen-1-hint"><span>Акция проходит с 01 марта по 30 апреля 2016 г.</span></div>
 						</div>
@@ -94,38 +92,38 @@
 									</div>
 								</li>
 								<li>
-									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s1.png"/></div>
+									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s2.png"/></div>
 									<div class="col-xs-12 col-sm-8">
-										<div class="bxslider-title"> <span>Консультация</span></div>
-										<div class="bxslider-text"> <span>Консультация имплантолога занимает от 15 минут до 1 часа <br/> (в случае, если снимки не были сделаны заранее).<br/>На консультации определяется возможность проведения<br/>имплантации и выбирается вид имплантата в зависимости <br/>от клинической ситуации.</span></div>
+										<div class="bxslider-title"> <span>Операция</span></div>
+										<div class="bxslider-text"> <span>Сама установка имплантата занимает не более 20 минут, вся процедура вместе с введением анестезии и накладыванием швов занимает около 1 часа. За 1 прием может быть установлено 3-4 имплантата.                                        </span></div>
 									</div>
 								</li>
 								<li>
-									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s1.png"/></div>
+									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s3.png"/></div>
 									<div class="col-xs-12 col-sm-8">
-										<div class="bxslider-title"> <span>Консультация</span></div>
-										<div class="bxslider-text"> <span>Консультация имплантолога занимает от 15 минут до 1 часа <br/> (в случае, если снимки не были сделаны заранее).<br/>На консультации определяется возможность проведения<br/>имплантации и выбирается вид имплантата в зависимости <br/>от клинической ситуации.</span></div>
+										<div class="bxslider-title"> <span>Снятие швов</span></div>
+										<div class="bxslider-text"> <span>Через неделю после операции пациент приходит на прием для контрольного осмотра и снятия швов.                                        </span></div>
 									</div>
 								</li>
 								<li>
-									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s1.png"/></div>
+									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s4.png"/></div>
 									<div class="col-xs-12 col-sm-8">
-										<div class="bxslider-title"> <span>Консультация</span></div>
-										<div class="bxslider-text"> <span>Консультация имплантолога занимает от 15 минут до 1 часа <br/> (в случае, если снимки не были сделаны заранее).<br/>На консультации определяется возможность проведения<br/>имплантации и выбирается вид имплантата в зависимости <br/>от клинической ситуации.</span></div>
+										<div class="bxslider-title"> <span>Контрольный осмотр через 1 месяц</span></div>
+										<div class="bxslider-text"> <span>Далее необходимо время на приживление имплантата. Через месяц пациент приходит для контрольного осмотра, после которого устанавливается формирователь десны.</span></div>
 									</div>
 								</li>
 								<li>
-									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s1.png"/></div>
+									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s5.png"/></div>
 									<div class="col-xs-12 col-sm-8">
-										<div class="bxslider-title"> <span>Консультация</span></div>
-										<div class="bxslider-text"> <span>Консультация имплантолога занимает от 15 минут до 1 часа <br/> (в случае, если снимки не были сделаны заранее).<br/>На консультации определяется возможность проведения<br/>имплантации и выбирается вид имплантата в зависимости <br/>от клинической ситуации.</span></div>
+										<div class="bxslider-title"> <span>Ортопедический этап</span></div>
+										<div class="bxslider-text"> <span>Через 2 недели после установки формирователя возможно начало ортопедического этапа: изготавливается слепок для подбора абатмента и изготовления коронки.</span></div>
 									</div>
 								</li>
 								<li>
-									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s1.png"/></div>
+									<div class="col-xs-12 col-sm-4"><img src="/assets/img/s6.png"/></div>
 									<div class="col-xs-12 col-sm-8">
-										<div class="bxslider-title"> <span>Консультация</span></div>
-										<div class="bxslider-text"> <span>Консультация имплантолога занимает от 15 минут до 1 часа <br/> (в случае, если снимки не были сделаны заранее).<br/>На консультации определяется возможность проведения<br/>имплантации и выбирается вид имплантата в зависимости <br/>от клинической ситуации.</span></div>
+										<div class="bxslider-title"> <span>Установка абатмента и коронки</span></div>
+										<div class="bxslider-text"> <span>После готовности абатмента он фиксируется на имплантате при помощи винта. Поверх абатмента устанавливается коронка.</span></div>
 									</div>
 								</li>
 							</ul>
@@ -206,23 +204,23 @@
 							<div class="screen-4-title"><span>МЫ ВСЕГДА РЯДОМ</span></div>
 							<div class="screen-4-subtitle"><span>У Нас уже 16 центров</span><br class="visible-xs"/><br class="visible-xs"/></div>
 							<div class="subway_map hidden-xs">
-								<div style="bottom: 110px;left: 141px;" class="sub_avtovo"><a href="/kontacty/stachek_69a/" target="_blank" title="Проспект Стачек, д. 69 А"></a></div>
-								<div style="bottom: 103px;right: 277px;" class="sub_mezhdunar"><a href="/kontacty/slavy-buharestskaya-96/" target="_blank" title="ул. Бухарестская, дом 96"></a></div>
-								<div style="bottom: 217px;right: 87px;" class="sub_bolshevik"><a target="_blank" href="/kontacty/rossiyskiy_8/" title="Российский проспект, д. 8"></a></div>
-								<div style="bottom: 190px;right: 87px;" class="sub_dibenko"><a href="/kontacty/leningradskaya_3/" title="Ленинградская ул. 3" target="_blank"></a></div>
-								<div style="bottom: 287px;right: 224px;" class="sub_ligov"><a href="/kontacty/ligovskiy_125/" title="Лиговский проспект, 125" target="_blank"></a></div>
-								<div style="bottom: 180px;right: 277px;" class="sub_ligov_obvod"><a href="/kontacty/ligovskiy_125/" title="Лиговский проспект, 125" target="_blank"></a></div>
-								<div style="left: 258px;top: 201px;" class="sub_pertograd"><a href="/kontacty/bolshaya_pushkarskaya_41/" title="ул. Большая Пушкарская, дом 41" target="_blank"></a></div>
-								<div style="right: 270px;top: 67px;" class="sub_grazhdan"><a href="/kontacty/prosvescheniya_87_2/" title="пр. Просвещения, дом 87, к.2" target="_blank"></a></div>
-								<div style="top: 94px;left: 130px;" class="sub_komendant"><a href="/kontacty/komendantskiy_7_1/" title="пр. Комендантский, дом 7, к.1" target="_blank"></a></div>
-								<div style="top: 94px;left: 154px;" class="sub_komendant2"><a href="/kontacty/komendantskiy_42_1/" title="пр. Комендантский, дом 42, к. 1" target="_blank"></a></div>
-								<div style="top: 120px;left: 143px;" class="sub_starder"><a href="/kontacty/bogatyrskiy_51_1/" title="Богатырский пр., д. 51 кор.1" target="_blank"></a></div>
-								<div style="left: 258px; top: 367px;" class="sub_voznesenskiy"><a href="/kontacty/voznesenskiy_21/" title="Вознесенский пр., дом 21" target="_blank"></a></div>
-								<div style="top: 70px;left: 257px;" class="sub_ozerki"><a href="/kontacty/lunacharskogo_11_3/" title="Луначарского пр., дом 11, к.3" target="_blank"></a></div>
-								<div style="top: 41px;left: 257px;" class="sub_prosvet"><a href="/kontacty/lunacharskogo_11_3/" title="Луначарского пр., дом 11, к.3" target="_blank"></a></div>
-								<div style="top: 590px;left: 258px;" class="sub_varshav"><a href="/kontacty/varshavskaya_61_1/" title="Варшавская ул., д. 61 корп.1" target="_blank"></a></div>
-								<div style="left: 30px;top: 275px;" class="sub_bolshoi"><a href="/kontacty/bolshoy-pr-vo-d-18/" title="Большой пр. ВО, д.18" target="_blank"></a></div>
-								<div style="left: 3px;top: 250px;" class="sub_novsmol"><a href="/kontacty/novosmolenskaya-d-1/&amp;quot;" title="Новосмоленская, д.1" target="_blank"> </a></div>
+								<div style="bottom: 110px;left: 141px;" data-wow-delay="0s" class="sub_avtovo wow bounceInDown"><a href="/kontacty/stachek_69a/" target="_blank" title="Проспект Стачек, д. 69 А"></a></div>
+								<div style="bottom: 103px;right: 277px;" data-wow-delay="0.1s" class="sub_mezhdunar wow bounceInDown"><a href="/kontacty/slavy-buharestskaya-96/" target="_blank" title="ул. Бухарестская, дом 96"></a></div>
+								<div style="bottom: 217px;right: 87px;" data-wow-delay="0.2s" class="sub_bolshevik wow bounceInDown"><a target="_blank" href="/kontacty/rossiyskiy_8/" title="Российский проспект, д. 8"></a></div>
+								<div style="bottom: 190px;right: 87px;" data-wow-delay="0.3s" class="sub_dibenko wow bounceInDown"><a href="/kontacty/leningradskaya_3/" title="Ленинградская ул. 3" target="_blank"></a></div>
+								<div style="bottom: 287px;right: 224px;" data-wow-delay="0.4s" class="sub_ligov wow bounceInDown"><a href="/kontacty/ligovskiy_125/" title="Лиговский проспект, 125" target="_blank"></a></div>
+								<div style="bottom: 180px;right: 277px;" data-wow-delay="0.5s" class="sub_ligov_obvod wow bounceInDown"><a href="/kontacty/ligovskiy_125/" title="Лиговский проспект, 125" target="_blank"></a></div>
+								<div style="left: 258px;top: 201px;" data-wow-delay="0.6s" class="sub_pertograd wow bounceInDown"><a href="/kontacty/bolshaya_pushkarskaya_41/" title="ул. Большая Пушкарская, дом 41" target="_blank"></a></div>
+								<div style="right: 270px;top: 67px;" data-wow-delay="0.7s" class="sub_grazhdan wow bounceInDown"><a href="/kontacty/prosvescheniya_87_2/" title="пр. Просвещения, дом 87, к.2" target="_blank"></a></div>
+								<div style="top: 94px;left: 130px;" data-wow-delay="0.8s" class="sub_komendant wow bounceInDown"><a href="/kontacty/komendantskiy_7_1/" title="пр. Комендантский, дом 7, к.1" target="_blank"></a></div>
+								<div style="top: 94px;left: 154px;" data-wow-delay="0.9s" class="sub_komendant2 wow bounceInDown"><a href="/kontacty/komendantskiy_42_1/" title="пр. Комендантский, дом 42, к. 1" target="_blank"></a></div>
+								<div style="top: 120px;left: 143px;" data-wow-delay="1s" class="sub_starder wow bounceInDown"><a href="/kontacty/bogatyrskiy_51_1/" title="Богатырский пр., д. 51 кор.1" target="_blank"></a></div>
+								<div style="left: 258px; top: 367px;" data-wow-delay="1.1s" class="sub_voznesenskiy wow bounceInDown"><a href="/kontacty/voznesenskiy_21/" title="Вознесенский пр., дом 21" target="_blank"></a></div>
+								<div style="top: 70px;left: 257px;" data-wow-delay="1.2s" class="sub_ozerki wow bounceInDown"><a href="/kontacty/lunacharskogo_11_3/" title="Луначарского пр., дом 11, к.3" target="_blank"></a></div>
+								<div style="top: 41px;left: 257px;" data-wow-delay="1.3s" class="sub_prosvet wow bounceInDown"><a href="/kontacty/lunacharskogo_11_3/" title="Луначарского пр., дом 11, к.3" target="_blank"></a></div>
+								<div style="top: 590px;left: 258px;" data-wow-delay="1.4s" class="sub_varshav wow bounceInDown"><a href="/kontacty/varshavskaya_61_1/" title="Варшавская ул., д. 61 корп.1" target="_blank"></a></div>
+								<div style="left: 30px;top: 275px;" data-wow-delay="1.5s" class="sub_bolshoi wow bounceInDown"><a href="/kontacty/bolshoy-pr-vo-d-18/" title="Большой пр. ВО, д.18" target="_blank"></a></div>
+								<div style="left: 3px;top: 250px;" data-wow-delay="1.6s" class="sub_novsmol wow bounceInDown"><a href="/kontacty/novosmolenskaya-d-1/&amp;quot;" title="Новосмоленская, д.1" target="_blank"> </a></div>
 							</div>
 							<div class="address-list visible-xs">
 								<ul class="list-unstyled">

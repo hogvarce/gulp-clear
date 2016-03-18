@@ -35,4 +35,15 @@ app.seeMore = function(target, count){
         $(this).removeClass('hidden');
     });
     if ( !$(target).find('.hidden').length ) $('.more').hide();
-}
+};
+
+app.menuScroll = function(){
+    $(document).on('click', '.header ul li a', function(e){
+        e.preventDefault();
+        var self = $(this);
+        $('.header ul li a').removeClass('active');
+        $('html,body').stop().animate({'scrollTop': $(self.attr('href')).offset().top - $('.header').height()}, "fast", function(){
+            self.addClass('active');
+        });
+    });
+};

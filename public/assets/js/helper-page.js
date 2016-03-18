@@ -13,6 +13,8 @@ $(function () {
 
 	 app.mobileMenuToogle();
 
+	 app.menuScroll();
+
 	 app.sliderInit();
 
 	  new WOW().init();
