@@ -318,6 +318,9 @@ body {
   margin: 0 auto;
   min-width: 100%;
 }
+.screen-3 .bx-wrapper img {
+  margin: 0 auto;
+}
 .screen-3 .bx-wrapper .name {
   font-family: 'PFDinReqular', sans-serif;
   font-size: 24px;
@@ -334,6 +337,14 @@ body {
 .screen-3 .bx-wrapper .text {
   font-size: 13px;
   font-weight: lighter;
+}
+.screen-3 .all-spec a {
+  color: #2ba4d8;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.screen-3 .all-spec a:hover {
+  text-decoration: none;
 }
 .screen-4-subtitle {
   font-size: 30px;
