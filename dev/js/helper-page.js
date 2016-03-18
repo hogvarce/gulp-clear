@@ -17,4 +17,9 @@ $(function () {
 
 	  new WOW().init();
 
+	  $('.address-list .more').click(function(e){
+		  e.preventDefault();
+		  app.seeMore('.address-list', 2);
+	  });
+
 }());

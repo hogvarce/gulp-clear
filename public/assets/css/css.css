@@ -332,6 +332,60 @@ body {
   margin-left: 0px;
   margin-top: 1px;
 }
+.subway_map div a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.address-list > ul {
+  counter-reset: item;
+}
+.address-list > ul > li {
+  position: relative;
+  padding: 30px 0px 30px 25px;
+  border-top: 1px solid #ececec;
+}
+.address-list > ul > li:before {
+  content: counter(item) '.';
+  counter-increment: item;
+  position: absolute;
+  left: 0px;
+  top: 27px;
+  color: #94c11f;
+  font-family: 'PFDinReqular', sans-serif;
+  font-size: 22px;
+}
+.address-metro ul li {
+  margin-top: 10px;
+  position: relative;
+}
+.address-metro ul li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  background: url("/assets/img/metro-icon.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+}
+.address-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.address-title a {
+  color: inherit;
+}
+.more a {
+  font-size: 18px;
+  color: #2ba4d8;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+.more a:hover,
+.more afocus {
+  border: 0;
+}
 .bx-wrapper {
   border: 0;
   box-shadow: none;

@@ -28,3 +28,11 @@ app.sliderInit = function(){
     });
 
 };
+
+app.seeMore = function(target, count){
+    $(target).find('.hidden').each(function(e){
+        if ( e > count ) return;
+        $(this).removeClass('hidden');
+    });
+    if ( !$(target).find('.hidden').length ) $('.more').hide();
+}
