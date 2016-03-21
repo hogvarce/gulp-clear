@@ -24,4 +24,6 @@ $(function () {
 		  app.seeMore('.address-list', 2);
 	  });
 
+	  app.yMapInit();
+
 }());

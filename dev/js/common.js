@@ -7,6 +7,7 @@ requirejs.config({
         bxSlider: '//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min',
         select2: '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min',
         wow: '//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min',
+        ymaps: '//api-maps.yandex.ru/2.1/?lang=ru_RU',
         app: 'app',
         helperPage: 'helper-page'
     },
@@ -29,12 +30,15 @@ requirejs.config({
             deps: ['jquery'],
             exports: 'bxSlider'
         },
-        app: {
-            deps: ['jquery'],
+        'ymaps': {
+            exports: 'ymaps'
+        },
+        'app': {
+            deps: ['jquery', 'ymaps'], 
             exports: 'app'
         },
         'helperPage': {
-            deps: ['jquery', 'fancybox', 'bxSlider', 'select2', 'wow', 'app'],
+            deps: ['jquery', 'fancybox', 'bxSlider', 'select2', 'wow', 'ymaps', 'app'],
             exports: 'helperPage'
         }
     },
