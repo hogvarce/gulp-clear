@@ -1,5 +1,9 @@
 // DOM READY
-define(['jquery'], function ($) {
-    $(function () {
-    }());
+define(['jquery'], function($){
+
+	$(function () {
+
+
+	}());
+
 });
