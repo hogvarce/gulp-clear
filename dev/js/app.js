@@ -1,7 +1,10 @@
 'use strict';
 
-var app = angular.module('myApp', []);
+angular.element(document).ready(function() {
+  angular.bootstrap(document, ['myApp']);
+});
 
+var app = angular.module('myApp', []);
 
 app.controller('mainController', function ($scope) {
   $scope.phones = [
