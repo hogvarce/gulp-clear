@@ -1,9 +1,4 @@
 
-<div ng-app="" class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<input type="text" ng-model="data.message"/>
-			<h1>{{data.message}}</h1>
-		</div>
-	</div>
-</div>
+<ul>
+	<li ng-repeat="phone in phones">{{phone.name}}</li>
+</ul>

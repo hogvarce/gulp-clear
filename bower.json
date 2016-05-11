@@ -1,0 +1,24 @@
+{
+  "name": "gulp-clear",
+  "description": "test angular and requirejs",
+  "main": "gulpfile.js",
+  "authors": [
+    "hogvarce"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hogvarce/gulp-clear",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-material": "^1.0.8",
+    "jquery": "^2.2.3",
+    "angular-route": "^1.5.5"
+  }
+}
