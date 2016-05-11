@@ -10,8 +10,9 @@ var gulp = require('gulp'),
 	spritesmith = require('gulp.spritesmith'),
 	uglify = require('gulp-uglify'), // минификатор
 	csso = require('gulp-csso'),
-	concat = require('gulp-concat'); // Склейка файлов
-	ts = require('gulp-typescript');
+	concat = require('gulp-concat'), // Склейка файлов
+	ts = require('gulp-typescript'),
+	wiredep = require('wiredep').stream;
 
 // Локальный сервер
 gulp.task('webserver', function() {
@@ -120,9 +121,11 @@ gulp.task('jade', function() {
 		.pipe(jade({
 			jade: jadeOrig,
 			pretty: '\t',
-			basedir: path.html.basedir,
-			data: gulp.src(['users.json'])
+			basedir: path.html.basedir
 		}))
+		.pipe(wiredep({
+	      ignorePath: '../public'
+	    }))
 		.pipe(gulp.dest(path.html.destination));
 });
 

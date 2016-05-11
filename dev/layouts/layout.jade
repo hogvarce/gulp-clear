@@ -1,11 +1,11 @@
 doctype html
-html
+html(ng-app="myApp")
 	head
 		include head.jade
-	body(ng-cloak, ng-controller="mainController")
+	body(ng-cloak ng-controller="mainController")
 			include header
 			section#content.content 
 				.wrapper
-					block content
+					block content 
 			include footer
 			include scripts

@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 	<head>
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title> </title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- bower:css-->
+		<link rel="stylesheet" href="..//bower_components/angular-material/angular-material.css" />
+		<!-- endbower-->
+		<!-- bower:js-->
+		<script src="..//bower_components/angular/angular.js"></script>
+		<script src="..//bower_components/angular-animate/angular-animate.js"></script>
+		<script src="..//bower_components/angular-aria/angular-aria.js"></script>
+		<script src="..//bower_components/angular-messages/angular-messages.js"></script>
+		<script src="..//bower_components/angular-material/angular-material.js"></script>
+		<script src="..//bower_components/jquery/dist/jquery.js"></script>
+		<script src="..//bower_components/angular-route/angular-route.js"></script>
+		<!-- endbower-->
 		<link rel="stylesheet" href="/assets/css/css.css">
 		<!--if lt IE 9
 		script(src='//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -37,7 +48,7 @@
 					</div>
 				</div>
 			</div>
-		</footer><!-- import scripts -->
-		<script src="/assets/js/lib/require.js" data-main="/assets/js/config"></script>
+		</footer>
+		<script src="/assets/js/app.js"></script>
 	</body>
 </html>
