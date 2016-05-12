@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngMaterial']);
 
 app.controller('mainController', function ($scope) {
   $scope.phones = [
