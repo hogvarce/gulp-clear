@@ -12,3 +12,7 @@ app.controller('mainController', function ($scope) {
      'snippet': 'The Next, Next Generation tablet.'}
   ];
 });
+
+angular.element(document).ready(function() {
+  angular.bootstrap(document, ['myApp']);
+});
