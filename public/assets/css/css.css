@@ -7,3 +7,9 @@ html,
 body {
   height: 100%;
 }
+main {
+  height: 100%;
+}
+[layout-padding] {
+  padding: 20px;
+}

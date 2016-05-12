@@ -19,8 +19,7 @@ requirejs.config({
             exports: 'angular'
         },
         'angular-material': {
-            deps: ['angular-animate','angular-aria','angular-messages'],
-            exports: 'angular-material'
+            deps: ['angular-animate','angular-aria','angular-messages']
         },
         'angular-animate': {
             exports: 'angular-animate'

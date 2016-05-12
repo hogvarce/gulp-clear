@@ -1,5 +1,13 @@
 
-<ul>
-	<li ng-repeat="phone in phones">{{phone.name}}</li>
-</ul>
-<md-button ng-click="">click</md-button>
+<main>
+	<md-content layout-wrap="layout-wrap" layout="row" layout-xs="column" layout-padding="layout-padding">
+		<div flex="30">
+			<ul>
+				<li ng-repeat="phone in phones">{{phone.name}}</li>
+			</ul>
+			<md-button ng-click="showMessage('Нажатие на кнопку!')">
+				<md-icon md-svg-icon="/bower_components/material-design-icons/social/svg/design/ic_person_48px.svg"></md-icon>
+			</md-button>
+		</div>
+	</md-content>
+</main>

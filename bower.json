@@ -20,6 +20,7 @@
     "angular-material": "^1.0.8",
     "jquery": "^2.2.3",
     "angular-route": "^1.5.5",
-    "requirejs": "^2.2.0"
+    "angular-material-icons": "^0.7.0",
+    "material-design-icons": "^2.2.3"
   }
 }
