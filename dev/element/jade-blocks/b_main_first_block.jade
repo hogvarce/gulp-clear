@@ -4,9 +4,9 @@ main
             ul
                 li(ng-repeat="phone in phones")
                     {{phone.name}}
-            md-button(ng-click="showMessage('Нажатие на кнопку!')")
-                md-icon(md-svg-icon="/bower_components/material-design-icons/social/svg/design/ic_person_48px.svg")
-                md-tooltip(md-direction="right") Play Music
+            md-button(ng-click="showMessage('Нажатие на кнопку!')").md-fab
+                md-icon(md-svg-icon="/bower_components/material-design-icons/navigation/svg/design/ic_menu_48px.svg")
+                md-tooltip(md-direction="right") Menu
         div(flex="70")
             
         div(flex="100" ng-include="'/element/jade-blocks/side-bar.html'")
