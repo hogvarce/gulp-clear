@@ -4,8 +4,8 @@ main
             ul
                 li(ng-repeat="phone in phones")
                     {{phone.name}}
-            md-button(ng-click="showMessage('Нажатие на кнопку!')").md-fab
-                md-icon(md-svg-icon="/bower_components/material-design-icons/navigation/svg/design/ic_menu_48px.svg")
+            md-button(ng-click="showMessage()").md-fab.md-hue-1
+                md-icon(md-svg-icon="check")
                 md-tooltip(md-direction="right") Menu
         div(flex="70")
             

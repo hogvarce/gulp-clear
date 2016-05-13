@@ -1,0 +1,7 @@
+md-dialog(aria-label="List dialog")
+  md-dialog-content
+    md-list
+      md-list-item(ng-repeat="item in items" ng-click="selectItem(item)")
+        p Номер {{item}}
+  md-dialog-actions
+    md-button(ng-click="closeDialog()" class="md-primary") Закрыть

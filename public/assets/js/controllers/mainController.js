@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('mainController', function ($scope, $mdDialog) {
+app.controller('mainController', function ($scope, $mdDialog, $mdMedia, $mdSidenav) {
   $scope.phones = [
     {'name': 'Nexus S',
      'snippet': 'Fast just got faster with Nexus S.'},
@@ -10,11 +10,18 @@ app.controller('mainController', function ($scope, $mdDialog) {
      'snippet': 'The Next, Next Generation tablet.'}
   ];
   $scope.showMessage = function(message){
-      var alert = $mdDialog.alert({
+      var dialog = $mdDialog.alert({
          title: 'Внимание',
          textContent: message,
-         ok: 'Закрыть'
+         templateUrl: '/element/jade-blocks/dialog.html',
+         controller: 'dialogCtrl'
        });
-       $mdDialog.show( alert );
+       $mdDialog.show( dialog );
+  };
+  $scope.toogleSideNav = function(){
+     $mdSidenav('left').toggle();
+  };
+  $scope.menuLink = function(link){
+    console.log(link);  
   };
 });

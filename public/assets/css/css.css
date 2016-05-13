@@ -13,9 +13,6 @@ main {
 [layout-padding] {
   padding: 20px;
 }
-.md-button.md-fab {
-  background-color: #eff0ec;
-}
-.md-button.md-fab:not([disabled]):hover {
-  background-color: #d2d5d7;
+.header .md-button {
+  width: 100%;
 }
