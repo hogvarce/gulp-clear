@@ -3,9 +3,9 @@
 	<md-content layout-wrap="layout-wrap" layout="row" layout-xs="column" layout-padding="layout-padding">
 		<div flex="30">
 			<ul>
-				<li ng-repeat="phone in phones">{{phone.name}}</li>
+				<li ng-repeat="phone in mc.phones">{{phone.name}}</li>
 			</ul>
-			<md-button ng-click="showMessage()" class="md-fab md-hue-1">
+			<md-button ng-click="mc.showMessage()" class="md-fab md-hue-1">
 				<md-icon md-svg-icon="check"></md-icon>
 				<md-tooltip md-direction="right">Menu</md-tooltip>
 			</md-button>

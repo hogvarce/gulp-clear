@@ -25,23 +25,23 @@
 		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	</head>
-	<body ng-cloak ng-controller="mainController" layout="column" layout-align="space-between stretch">
-		<header id="header" layout-wrap layout="row" layout-xs="column" layout-align="center center" layout-padding class="header">
+	<body ng-cloak ng-controller="mainController as mc" layout="column" layout-align="space-between stretch">
+		<header id="header" layout-wrap layout="row" layout-align="end center" layout-padding class="header">
 			<div hide-gt-xs>
-				<md-button ng-click="toogleSideNav()" aria-label="Menu" class="md-fab">
+				<md-button ng-click="mc.toogleSideNav()" aria-label="Menu" class="md-fab">
 					<md-icon md-svg-icon="menu"></md-icon>
 				</md-button>
 			</div>
 			<md-sidenav flex md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" class="md-sidenav-top">
-				<ul layout-wrap layout-margin layout="row" layout-xs="column" layout-align="center center">
+				<ul layout-wrap layout-margin layout="row" layout-xs="column" layout-align="end center">
 					<li>
-						<md-button ng-click="menuLink('/')" class="md-primary md-hue-2">Главная</md-button>
+						<md-button ng-click="mc.menuLink('/')" class="md-primary md-hue-2">Главная</md-button>
 					</li>
 					<li>
-						<md-button ng-click="menuLink('/photo')" class="md-primary md-hue-2">Фото</md-button>
+						<md-button ng-click="mc.menuLink('/photo')" class="md-primary md-hue-2">Фото</md-button>
 					</li>
 					<li>
-						<md-button ng-click="menuLink('/contacts')" class="md-primary md-hue-2">Контакты</md-button>
+						<md-button ng-click="mc.menuLink('/contacts')" class="md-primary md-hue-2">Контакты</md-button>
 					</li>
 				</ul>
 			</md-sidenav>
@@ -61,8 +61,8 @@
 		<script src="..//bower_components/angular-route/angular-route.js"></script>
 		<script src="..//bower_components/angular-material-icons/angular-material-icons.min.js"></script>
 		<!-- endbower-->
-		<script src="/assets/js/app.js"></script>
-		<script src="/assets/js/controllers/mainController.js"></script>
 		<script src="/assets/js/controllers/dialogCtrl.js"></script>
+		<script src="/assets/js/controllers/mainController.js"></script>
+		<script src="/assets/js/app.js"></script>
 	</body>
 </html>
