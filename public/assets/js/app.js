@@ -2,7 +2,8 @@ var app;
 (function (app) {
     angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute'])
         .controller('mainController', app.MainController)
-        .config(function ($mdIconProvider, $mdThemingProvider, $routeProvider) {
+        .controller('formCtrl', app.formCtrl)
+        .config(function ($mdIconProvider, $mdThemingProvider, $routeProvider, $locationProvider) {
         $mdThemingProvider.definePalette('paletteNord', {
             '50': '4b4b4b',
             '100': 'ffebee',
@@ -34,6 +35,12 @@ var app;
             when('/photo', {
             templateUrl: 'element/jade-blocks/photos.html',
             controller: 'mainController'
-        });
+        }).
+            when('/contacts', {
+            templateUrl: 'element/jade-blocks/contacts.html',
+            controller: 'formCtrl'
+        }).
+            otherwise('/');
+        // $locationProvider.html5Mode(true);
     });
 })(app || (app = {}));
