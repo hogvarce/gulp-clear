@@ -1,10 +1,11 @@
 var app;
 (function (app) {
     var MainController = (function () {
-        function MainController($mdSidenav, $mdDialog, $mdMedia) {
+        function MainController($mdSidenav, $mdDialog, $mdMedia, $location) {
             this.$mdSidenav = $mdSidenav;
             this.$mdDialog = $mdDialog;
             this.$mdMedia = $mdMedia;
+            this.$location = $location;
             this.phones = [
                 { 'name': 'Nexus S',
                     'snippet': 'Fast just got faster with Nexus S.' },
@@ -31,11 +32,11 @@ var app;
         };
         ;
         MainController.prototype.menuLink = function (link) {
-            console.log(link);
+            this.$location.path(link);
             this.$mdSidenav('left').toggle();
         };
         ;
-        MainController.$inject = ['$mdSidenav', '$mdDialog', '$mdMedia'];
+        MainController.$inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$location'];
         return MainController;
     })();
     app.MainController = MainController;

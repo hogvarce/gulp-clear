@@ -1,12 +1,4 @@
 main
     md-content(layout-wrap layout="row" layout-xs="column" layout-padding)
-        div(flex="30")
-            ul
-                li(ng-repeat="phone in mc.phones")
-                    {{phone.name}}
-            md-button(ng-click="mc.showMessage()").md-fab.md-hue-1
-                md-icon(md-svg-icon="check")
-                md-tooltip(md-direction="right") Menu
-        div(flex="70")
+        ng-view
             
-        div(flex="100" ng-include="'/element/jade-blocks/side-bar.html'")

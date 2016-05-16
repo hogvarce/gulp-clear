@@ -1,0 +1,12 @@
+
+<div flex="30">
+	<ul>
+		<li ng-repeat="phone in mc.phones">{{phone.name}}</li>
+	</ul>
+	<md-button ng-click="mc.showMessage()" class="md-fab md-hue-1">
+		<md-icon md-svg-icon="check"></md-icon>
+		<md-tooltip md-direction="right">Menu</md-tooltip>
+	</md-button>
+</div>
+<div flex="70"></div>
+<div flex="100" ng-include="'/element/jade-blocks/side-bar.html'"></div>

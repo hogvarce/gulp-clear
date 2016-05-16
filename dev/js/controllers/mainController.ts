@@ -1,10 +1,11 @@
 module app {
     export class MainController {
-        static $inject = ['$mdSidenav', '$mdDialog', '$mdMedia'];
+        static $inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$location'];
         constructor(
              private $mdSidenav,
              private $mdDialog,
-             private $mdMedia
+             private $mdMedia,
+             private $location
         ){
             var self = this;
         }
@@ -30,7 +31,7 @@ module app {
            this.$mdSidenav('left').toggle();
         };
         menuLink(link: string) : void {
-          console.log(link);
+          this.$location.path(link);
           this.$mdSidenav('left').toggle();
         };
     }

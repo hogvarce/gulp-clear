@@ -1,10 +1,10 @@
 var app;
 (function (app) {
-    angular.module('myApp', ['ngMaterial', 'ngMdIcons'])
+    angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute'])
         .controller('mainController', app.MainController)
-        .config(function ($mdIconProvider, $mdThemingProvider) {
-        $mdThemingProvider.definePalette('myPalette', {
-            '50': 'ffebee',
+        .config(function ($mdIconProvider, $mdThemingProvider, $routeProvider) {
+        $mdThemingProvider.definePalette('paletteNord', {
+            '50': '4b4b4b',
             '100': 'ffebee',
             '200': 'ef9a9a',
             '300': 'e57373',
@@ -20,11 +20,20 @@ var app;
             'A700': 'd50000',
         });
         $mdThemingProvider.theme('default')
-            .accentPalette('myPalette', {
+            .accentPalette('indigo', {
             'default': '400',
             'hue-1': 'A400'
         });
         $mdIconProvider.icon('menu', '/bower_components/material-design-icons/navigation/svg/design/ic_menu_48px.svg', 48)
             .icon('check', '/bower_components/material-design-icons/navigation/svg/design/ic_check_48px.svg', 48);
+        $routeProvider.
+            when('/', {
+            templateUrl: 'element/jade-blocks/main.html',
+            controller: 'mainController'
+        }).
+            when('/photo', {
+            templateUrl: 'element/jade-blocks/photos.html',
+            controller: 'mainController'
+        });
     });
 })(app || (app = {}));
