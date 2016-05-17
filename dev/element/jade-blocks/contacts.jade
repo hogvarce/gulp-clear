@@ -3,7 +3,8 @@ form(name="contactForm" ng-submit="fc.submit()" ng-controller="formCtrl as fc")
         label name
         input(type="text" name="name" 
                 ng-model="fc.contact.name" 
-                required ng-minlength="3" 
+                required 
+                ng-minlength="3" 
                 ng-maxlength="8" 
                 ng-required="true")
         p(ng-show="contactForm.name.$error.minlength") Слишком короткое имя
@@ -14,7 +15,7 @@ form(name="contactForm" ng-submit="fc.submit()" ng-controller="formCtrl as fc")
                 name="phone" 
                 ng-model="fc.contact.phone" 
                 required ng-required="true" 
-                ng-pattern="/111/")
+                ng-pattern="/^[\s()+-]*([0-9][\s()+-]*){6,20}$/")
         p(ng-show="contactForm.phone.$error.pattern") Неверный формат
     md-input-container.md-block(flex-gt-xs)
         md-button(type="submit" 

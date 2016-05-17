@@ -8,7 +8,7 @@
 	</md-input-container>
 	<md-input-container flex-gt-xs="flex-gt-xs" class="md-block">
 		<label>phone</label>
-		<input type="tel" name="phone" ng-model="fc.contact.phone" required="required" ng-required="true" ng-pattern="/111/"/>
+		<input type="tel" name="phone" ng-model="fc.contact.phone" required="required" ng-required="true" ng-pattern="/^[s()+-]*([0-9][s()+-]*){6,20}$/"/>
 		<p ng-show="contactForm.phone.$error.pattern">Неверный формат</p>
 	</md-input-container>
 	<md-input-container flex-gt-xs="flex-gt-xs" class="md-block">
