@@ -5,7 +5,8 @@
 </form>
 <div flex="100" class="weater">
 	<ul ng-show="mc.cities.length">
-		<li ng-repeat="city in mc.cities | unique:'name'" layout-padding="layout-padding" layout-wrap="layout-wrap" layout="row" layout-xs="row" class="weater__item">
+		<li ng-repeat="city in mc.cities | unique:'id'" layout-padding="layout-padding" layout-wrap="layout-wrap" layout="row" layout-xs="row" class="weater__item">
+			<div style="display:none" class="index"><span>{{city.id}}</span></div>
 			<div flex="70" flex-xs="100" layout="column" class="weater__content">
 				<h3>{{city.name}}</h3>
 				<div class="weater__icon"><img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png"/></div>

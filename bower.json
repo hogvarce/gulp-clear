@@ -20,7 +20,6 @@
     "angular-material": "^1.0.8",
     "jquery": "^2.2.3",
     "angular-route": "^1.5.5",
-    "angular-material-icons": "^0.7.0",
     "material-design-icons": "^2.2.3",
     "ng-redux": "^3.3.0"
   }

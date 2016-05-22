@@ -1,5 +1,5 @@
 module app {
-    angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'ngRedux'])
+    angular.module('myApp', ['ngMaterial', 'ngRoute', 'ngRedux'])
     .controller('mainController', MainController)
     .filter('unique', function() {
        return function(collection, keyname) {

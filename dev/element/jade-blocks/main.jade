@@ -3,7 +3,9 @@ form(ng-submit="mc.loadCity()" name="form" flex="100" layout="row" layout-wrap l
     input(type="text" ng-model="mc.request")
 div(flex="100").weater
     ul(ng-show="mc.cities.length")
-        li(ng-repeat="city in mc.cities | unique:'name'" layout-padding layout-wrap layout="row" layout-xs="row").weater__item
+        li(ng-repeat="city in mc.cities | unique:'id'" layout-padding layout-wrap layout="row" layout-xs="row").weater__item
+            .index(style="display:none")
+                span {{city.id}}
             .weater__content(flex="70" flex-xs="100" layout="column")
                 h3 {{city.name}}
                 .weater__icon

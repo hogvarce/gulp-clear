@@ -23,8 +23,6 @@ var app;
                     return false;
                 }
                 city = response.data;
-                console.log(city);
-                console.log(self.cities);
                 if (self.checkUniq(city.name, self.cities))
                     self.cities.push(city);
                 return self.cities;
@@ -40,7 +38,10 @@ var app;
             var indexCity = this.cities.indexOf(city);
             var savedCity = (typeof localStorage['cities'] != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
             this.cities.splice(indexCity, 1);
-            savedCity.splice(indexCity, 1);
+            for (c in savedCity) {
+                if (savedCity[c].name == city.name)
+                    savedCity.splice(c, 1);
+            }
             localStorage.setItem('cities', JSON.stringify(savedCity));
             this.showMessage("Город удален.");
         };
