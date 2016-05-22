@@ -1,8 +1,16 @@
 form(ng-submit="mc.loadCity()" name="form" flex="100" layout="row" layout-wrap layout-xs="row")#form
-    md-button(type="submit") Показать погоду
+    md-button(type="submit") Показать погоду в
     input(type="text" ng-model="mc.request")
-div(flex="100")
+div(flex="100").weater
     ul(ng-show="mc.cities.length")
-        li(ng-repeat="city in mc.cities")
-            h3 {{city.name}}
-            img(src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png")
+        li(ng-repeat="city in mc.cities | unique:'name'" layout-padding layout-wrap layout="row" layout-xs="row").weater__item
+            .weater__content(flex="70" flex-xs="100" layout="column")
+                h3 {{city.name}}
+                .weater__icon
+                    img(src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png")
+                .weater__temp
+                    span {{(city.main.temp - 273.15).toFixed(2)}}#[sup o]C
+            .weater__edit(flex="30" flex-xs="100" layout="row")
+                md-button(ng-click="mc.saveItem(city)") Сохранить
+                md-button(ng-click="mc.deleteItem(city)") Удалить
+                

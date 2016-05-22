@@ -13,6 +13,18 @@ main {
 [layout-padding] {
   padding: 20px;
 }
+md-sidenav {
+  background: transparent;
+}
 .header .md-button {
   width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+.weater__item {
+  background-color: #f7fcff;
+}
+.weater__item:nth-of-type(2n+2) {
+  background-color: #fff;
 }

@@ -1,10 +1,26 @@
 module app {
-    angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute'])
+    angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'ngRedux'])
     .controller('mainController', MainController)
+    .filter('unique', function() {
+       return function(collection, keyname) {
+          var output = [],
+              keys = [];
+
+          angular.forEach(collection, function(item) {
+              var key = item[keyname];
+              if(keys.indexOf(key) === -1) {
+                  keys.push(key);
+                  output.push(item);
+              }
+          });
+
+          return output;
+       };
+    })
     .config(($mdIconProvider: angular.material.IIconProvider,
          $mdThemingProvider: angular.material.IThemingProvider,
          $routeProvider: angular.routeProvider,
-         $locationProvider: angular.locationProvider) => {
+         $ngReduxProvider: ngRedux) => {
                 $mdThemingProvider.definePalette('paletteNord', {
                   '50': '4b4b4b',
                   '100': 'ffebee',
