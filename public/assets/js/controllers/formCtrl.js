@@ -23,6 +23,6 @@ var app;
         };
         formCtrl.$inject = ['$mdDialog', '$mdToast'];
         return formCtrl;
-    })();
+    }());
     app.formCtrl = formCtrl;
 })(app || (app = {}));

@@ -7,8 +7,9 @@ var app;
             this.$mdMedia = $mdMedia;
             this.$http = $http;
             this.$mdToast = $mdToast;
-            this.cities = (localStorage.getItem('cities') != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
+            this.cities = [];
             var self = this;
+            self.cities = (typeof localStorage['cities'] != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
         }
         MainController.prototype.loadCity = function () {
             if (typeof this.request == "undefined")
@@ -23,6 +24,7 @@ var app;
                 }
                 city = response.data;
                 console.log(city);
+                console.log(self.cities);
                 if (self.checkUniq(city.name, self.cities))
                     self.cities.push(city);
                 return self.cities;
@@ -36,14 +38,14 @@ var app;
         };
         MainController.prototype.deleteItem = function (city) {
             var indexCity = this.cities.indexOf(city);
-            var savedCity = (localStorage.getItem('cities') != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
+            var savedCity = (typeof localStorage['cities'] != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
             this.cities.splice(indexCity, 1);
             savedCity.splice(indexCity, 1);
             localStorage.setItem('cities', JSON.stringify(savedCity));
             this.showMessage("Город удален.");
         };
         MainController.prototype.saveItem = function (city) {
-            var savedCity = (localStorage.getItem('cities') != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
+            var savedCity = (typeof localStorage['cities'] != "undefined") ? JSON.parse(localStorage.getItem('cities')) : [];
             if (this.checkUniq(city.name, savedCity))
                 savedCity.push(city);
             else {
@@ -67,6 +69,6 @@ var app;
         };
         MainController.$inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$http', '$mdToast'];
         return MainController;
-    })();
+    }());
     app.MainController = MainController;
 })(app || (app = {}));

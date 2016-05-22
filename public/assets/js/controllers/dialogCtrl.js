@@ -16,6 +16,6 @@ var app;
         ;
         dialogCtrl.$inject = ['$mdDialog'];
         return dialogCtrl;
-    })();
+    }());
     app.dialogCtrl = dialogCtrl;
 })(app || (app = {}));

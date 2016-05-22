@@ -1,6 +1,7 @@
 module app {
     export class MainController {
         static $inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$http', '$mdToast'];
+        cities: [] = [];
         constructor(
              private $mdSidenav,
              private $mdDialog,
@@ -9,9 +10,10 @@ module app {
              private $mdToast
         ){
             var self = this;
+            self.cities = (typeof localStorage['cities'] != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
         }
 
-        cities: [] = (localStorage.getItem('cities') != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
+
 
         loadCity(): [] {
             if (typeof this.request == "undefined") return false;
@@ -26,6 +28,7 @@ module app {
                    }
                    city = response.data;
                    console.log(city);
+                   console.log(self.cities);
                    if (self.checkUniq(city.name, self.cities))
                         self.cities.push(city);
                    return  self.cities;
@@ -43,7 +46,7 @@ module app {
 
         deleteItem(city: {}): void {
             let indexCity = this.cities.indexOf(city);
-            let savedCity = (localStorage.getItem('cities') != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
+            let savedCity = (typeof localStorage['cities'] != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
             this.cities.splice(indexCity, 1);
             savedCity.splice(indexCity, 1);
             localStorage.setItem('cities', JSON.stringify(savedCity));
@@ -51,7 +54,7 @@ module app {
         }
 
         saveItem(city: {}): void {
-            let savedCity = (localStorage.getItem('cities') != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
+            let savedCity = (typeof localStorage['cities'] != "undefined") ?  JSON.parse(localStorage.getItem('cities')) : [];
             if (this.checkUniq(city.name, savedCity))
                 savedCity.push(city);
             else {
