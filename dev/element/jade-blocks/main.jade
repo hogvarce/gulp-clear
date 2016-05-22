@@ -1,9 +1,8 @@
-div(flex="30")
-    ul
-        li(ng-repeat="phone in mc.phones")
-            {{phone.name}}
-    md-button(ng-click="mc.showMessage()").md-fab.md-hue-1
-        md-icon(md-svg-icon="check")
-        md-tooltip(md-direction="right") Menu
-div(flex="70")
-    img(src="/bower_components/material-design-icons/www\/images/icons-library.png" alt="" flex="100")    
+form(ng-submit="mc.loadCity()" name="form" flex="100" layout="row" layout-wrap layout-xs="row")#form
+    md-button(type="submit") Показать погоду
+    input(type="text" ng-model="mc.request")
+div(flex="100")
+    ul(ng-show="mc.cities.length")
+        li(ng-repeat="city in mc.cities")
+            h3 {{city.name}}
+            img(src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png")

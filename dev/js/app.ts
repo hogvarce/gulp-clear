@@ -1,7 +1,6 @@
 module app {
     angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute'])
     .controller('mainController', MainController)
-    .controller('formCtrl', formCtrl)
     .config(($mdIconProvider: angular.material.IIconProvider,
          $mdThemingProvider: angular.material.IThemingProvider,
          $routeProvider: angular.routeProvider,

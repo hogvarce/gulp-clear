@@ -2,7 +2,6 @@ var app;
 (function (app) {
     angular.module('myApp', ['ngMaterial', 'ngMdIcons', 'ngRoute'])
         .controller('mainController', app.MainController)
-        .controller('formCtrl', app.formCtrl)
         .config(function ($mdIconProvider, $mdThemingProvider, $routeProvider, $locationProvider) {
         $mdThemingProvider.definePalette('paletteNord', {
             '50': '4b4b4b',

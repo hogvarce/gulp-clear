@@ -1,38 +1,26 @@
 module app {
     export class MainController {
-        static $inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$location'];
+        static $inject = [ '$mdSidenav', '$mdDialog', '$mdMedia', '$location', '$http'];
         constructor(
              private $mdSidenav,
              private $mdDialog,
              private $mdMedia,
-             private $location
+             private $location,
+             private $http
         ){
             var self = this;
         }
-        phones: [] = [
-          {'name': 'Nexus S',
-           'snippet': 'Fast just got faster with Nexus S.'},
-          {'name': 'Motorola XOOM™ with Wi-Fi',
-           'snippet': 'The Next, Next Generation tablet.'},
-          {'name': 'MOTOROLA XOOM™',
-           'snippet': 'The Next, Next Generation tablet.'}
-        ];
-        showMessage(message: string) : void {
-            var dialog = this.$mdDialog.alert({
-               title: 'Внимание',
-               textContent: message,
-               templateUrl: '/element/jade-blocks/dialog.html',
-               controller: dialogCtrl,
-               controllerAs: 'dc'
-             });
-             this.$mdDialog.show( dialog );
-        };
-        toogleSideNav() : void {
-           this.$mdSidenav('left').toggle();
-        };
-        menuLink(link: string) : void {
-          this.$location.path(link);
-          this.$mdSidenav('left').toggle();
-        };
+        cities: [] = [];
+        loadCity(): [] {
+            var self = this;
+            var city = {};
+            this.$http.get("//api.openweathermap.org/data/2.5/weather?q="+this.request+"&appid=15806d6db53ac3fa3eea6e2d05724e8a")
+               .then(function(response) {
+                   city = response.data;
+                   console.log(city);
+                   self.cities.push(city);
+                   return  self.cities;
+               }
+        }
     }
 }

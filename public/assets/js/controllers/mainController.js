@@ -1,42 +1,27 @@
 var app;
 (function (app) {
     var MainController = (function () {
-        function MainController($mdSidenav, $mdDialog, $mdMedia, $location) {
+        function MainController($mdSidenav, $mdDialog, $mdMedia, $location, $http) {
             this.$mdSidenav = $mdSidenav;
             this.$mdDialog = $mdDialog;
             this.$mdMedia = $mdMedia;
             this.$location = $location;
-            this.phones = [
-                { 'name': 'Nexus S',
-                    'snippet': 'Fast just got faster with Nexus S.' },
-                { 'name': 'Motorola XOOM™ with Wi-Fi',
-                    'snippet': 'The Next, Next Generation tablet.' },
-                { 'name': 'MOTOROLA XOOM™',
-                    'snippet': 'The Next, Next Generation tablet.' }
-            ];
+            this.$http = $http;
+            this.cities = [];
             var self = this;
         }
-        MainController.prototype.showMessage = function (message) {
-            var dialog = this.$mdDialog.alert({
-                title: 'Внимание',
-                textContent: message,
-                templateUrl: '/element/jade-blocks/dialog.html',
-                controller: app.dialogCtrl,
-                controllerAs: 'dc'
+        MainController.prototype.loadCity = function () {
+            var self = this;
+            var city = {};
+            this.$http.get("//api.openweathermap.org/data/2.5/weather?q=" + this.request + "&appid=15806d6db53ac3fa3eea6e2d05724e8a")
+                .then(function (response) {
+                city = response.data;
+                console.log(city);
+                self.cities.push(city);
+                return self.cities;
             });
-            this.$mdDialog.show(dialog);
         };
-        ;
-        MainController.prototype.toogleSideNav = function () {
-            this.$mdSidenav('left').toggle();
-        };
-        ;
-        MainController.prototype.menuLink = function (link) {
-            this.$location.path(link);
-            this.$mdSidenav('left').toggle();
-        };
-        ;
-        MainController.$inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$location'];
+        MainController.$inject = ['$mdSidenav', '$mdDialog', '$mdMedia', '$location', '$http'];
         return MainController;
     })();
     app.MainController = MainController;
