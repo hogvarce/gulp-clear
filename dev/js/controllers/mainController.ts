@@ -28,7 +28,7 @@ module app {
                    console.log(city);
                    if (self.checkUniq(city.name, self.cities))
                         self.cities.push(city);
-                   return  self.cities;
+                   return  self.cities; 
                }
         }
 
