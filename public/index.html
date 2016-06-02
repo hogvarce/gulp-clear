@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -9,51 +9,29 @@
 		<title> </title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
 		<!-- bower:css-->
-		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
-		<link rel="stylesheet" href="/bower_components/angular-material-icons/angular-material-icons.css" />
 		<!-- endbower-->
 		<link rel="stylesheet" href="/assets/css/css.css">
-		<style>
-			[ng\:cloak],
-			[ng-cloak],
-			[data-ng-cloak],
-			[x-ng-cloak],
-			.ng-cloak,
-			.x-ng-cloak {
-			  display: none !important
-			}
-		</style>
 		<!--if lt IE 9-->
 		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	</head>
-	<body ng-cloak ng-controller="mainController as mc" layout="column" layout-align="space-between stretch">
-		<header id="header" layout-wrap layout="row" layout-align="end center" layout-padding class="header">
-			<div hide-gt-xs>
-				<md-button ng-click="mc.toogleSideNav()" aria-label="Menu" class="md-fab">
-					<md-icon md-svg-icon="menu"></md-icon>
-				</md-button>
-			</div>
-			<md-sidenav flex md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" class="md-sidenav-top"></md-sidenav>
-		</header>
-		<main>
-			<md-content>
-				<ng-view layout-wrap layout="row" layout-xs="column" layout-padding></ng-view>
-			</md-content>
-		</main>
-		<footer id="footer" layout-wrap layout="row" layout-xs="column" layout-align="center center" layout-padding></footer>
+	<body>
+		<header></header>
+		<main id="main"></main>
+		<footer id="footer"></footer>
+		<script type="text/template" id="item-template"><p><%= name %></p></script>
 		<!-- bower:js-->
-		<script src="/bower_components/angular/angular.js"></script>
-		<script src="/bower_components/angular-animate/angular-animate.js"></script>
-		<script src="/bower_components/angular-aria/angular-aria.js"></script>
-		<script src="/bower_components/angular-messages/angular-messages.js"></script>
-		<script src="/bower_components/angular-material/angular-material.js"></script>
 		<script src="/bower_components/jquery/dist/jquery.js"></script>
-		<script src="/bower_components/angular-route/angular-route.js"></script>
-		<script src="/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
-		<script src="/bower_components/ng-redux/dist/ng-redux.js"></script>
+		<script src="/bower_components/underscore/underscore.js"></script>
+		<script src="/bower_components/backbone/backbone.js"></script>
+		<script src="/bower_components/backbone.babysitter/lib/backbone.babysitter.js"></script>
+		<script src="/bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+		<script src="/bower_components/backbone.marionette/lib/core/backbone.marionette.js"></script>
 		<!-- endbower-->
-		<script src="/assets/js/controllers/mainController.js"></script>
+		<script src="/assets/js/models/video-item.js"></script>
+		<script src="/assets/js/collections/video-list.js"></script>
+		<script src="/assets/js/layout/layout.js"></script>
+		<script src="/assets/js/views/video-view.js"></script>
 		<script src="/assets/js/app.js"></script>
 	</body>
 </html>

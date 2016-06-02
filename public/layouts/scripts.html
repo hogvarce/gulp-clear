@@ -1,14 +1,15 @@
 
+<script type="text/template" id="item-template"><p><%= name %></p></script>
 <!-- bower:js-->
-<script src="..//bower_components/angular/angular.js"></script>
-<script src="..//bower_components/angular-animate/angular-animate.js"></script>
-<script src="..//bower_components/angular-aria/angular-aria.js"></script>
-<script src="..//bower_components/angular-messages/angular-messages.js"></script>
-<script src="..//bower_components/angular-material/angular-material.js"></script>
 <script src="..//bower_components/jquery/dist/jquery.js"></script>
-<script src="..//bower_components/angular-route/angular-route.js"></script>
-<script src="..//bower_components/angular-material-icons/angular-material-icons.min.js"></script>
-<script src="..//bower_components/ng-redux/dist/ng-redux.js"></script>
+<script src="..//bower_components/underscore/underscore.js"></script>
+<script src="..//bower_components/backbone/backbone.js"></script>
+<script src="..//bower_components/backbone.babysitter/lib/backbone.babysitter.js"></script>
+<script src="..//bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+<script src="..//bower_components/backbone.marionette/lib/core/backbone.marionette.js"></script>
 <!-- endbower-->
-<script src="/assets/js/controllers/mainController.js"></script>
+<script src="/assets/js/models/video-item.js"></script>
+<script src="/assets/js/collections/video-list.js"></script>
+<script src="/assets/js/layout/layout.js"></script>
+<script src="/assets/js/views/video-view.js"></script>
 <script src="/assets/js/app.js"></script>
